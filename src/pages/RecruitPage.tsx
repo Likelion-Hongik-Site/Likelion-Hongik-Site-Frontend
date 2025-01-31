@@ -8,17 +8,17 @@ export const RecruitPage = () => {
 
   return (
     <div className="w-full h-full bg-black pl-[105px]">
-      <div className="flex flex-col">
-        <span className="text-white text-[160px]">RECRUITING</span>
-        <span className="text-white opacity-50 text-2xl">
+      <div className="flex flex-col relative">
+        <span className="text-white heading1-eng">RECRUITING</span>
+        <span className="text-gray4 opacity-50 body1 absolute top-[215px]">
           2025년 멋쟁이사자처럼을 함께할 13기 멤버를 모집합니다. 일정 및 소개를 반드시 읽고 폼을
           제출해주세요.
         </span>
       </div>
-      <div className="flex items-center gap-[21px] mt-10">
+      <div className="flex items-center gap-[18px] mt-10">
         <button
-          className={`flex items-center justify-center w-[249px] h-[91px] rounded-[50px] text-white text-center text-[32px] cursor-pointer
-            ${selected === 'schedule' ? 'bg-[#1c1c1c]' : 'bg-black'}`}
+          className={`flex items-center justify-center subhead2 px-7 py-4 ph:px-[18px] ph:py-[10px] rounded-[100px] text-center cursor-pointer
+            ${selected === 'schedule' ? 'text-black bg-blue2' : 'text-blue2 bg-black'}`}
           onClick={() => setSelected('schedule')}
         >
           일정 및 소개
@@ -28,7 +28,7 @@ export const RecruitPage = () => {
           href={applicationFormURL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center w-[285px] h-[91px] rounded-[50px] bg-black text-white text-center text-[32px] cursor-pointer hover:bg-[#1c1c1c] transition"
+          className="flex items-center justify-center subhead2 px-7 py-4 ph:px-[18px] ph:py-[10px] rounded-[100px] bg-black text-blue2 text-center cursor-pointer border-blue2 ring-1 hover:bg-blue2 hover:text-black transition"
         >
           지원 폼 작성하기
         </a>

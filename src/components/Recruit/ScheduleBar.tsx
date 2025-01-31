@@ -1,34 +1,82 @@
+import { useState, useEffect } from 'react';
+
 export const ScheduleBar = () => {
-  // 일정 데이터
   const schedule = [
-    { date: '3월', event: 'OT' },
-    { date: '3월', event: 'MT' },
-    { date: '5월', event: '아이디어톤' },
-    { date: '8월', event: '애거돈' },
-    { date: '9월', event: '해커톤' },
-    { date: '10월', event: '신촌톤' },
-    { date: '12월', event: '데모데이' },
+    { date: '3월', event: 'OT', detail: '멋쟁이사자처럼 13기 출발!' },
+    { date: '3월', event: 'MT', detail: '친목도모 엠티 운영진들의 차력쇼 고기구워먹기 냠냠' },
+    { date: '5월', event: '아이디어톤', detail: '아이디어톤 설명 아이디어톤 설명 아이디어톤 설명' },
+    { date: '7월', event: '애거돈', detail: '멋사 홍대에서만 진행하는 실전 대비 무박2일 해커톤' },
+    { date: '7월', event: '방학 세션', detail: '방학세션 설명 방학세션 설명' },
+    {
+      date: '8월',
+      event: '중앙 해커톤',
+      detail: '멋쟁이사자처럼 대학에서 진행하는 전국 연합 해커톤',
+    },
+    { date: '10월', event: '신촌톤', detail: '신촌 연합(서강, 이화, 연세, 홍익) 무박2일 해커톤' },
+    { date: '12월', event: '데모데이', detail: '신촌 연합 데모데이 발표일' },
   ];
 
-  return (
-    <div className="w-full mt-[98px] pb-32 flex flex-col">
-      <span className="text-white text-2xl mb-[116px]">활동 계획</span>
-      <div className="flex w-full relative">
-        {schedule.map((item, index) => (
-          <div key={index} className="flex flex-col items-center relative w-[150px]">
-            {index === 0 || item.date !== schedule[index - 1].date ? (
-              <span className="text-white text-2xl mb-2">{item.date}</span>
-            ) : (
-              <span className="h-[40px]" />
-            )}
+  const [gridColumns, setGridColumns] = useState(window.innerWidth >= 768 ? 4 : 2);
+  const rowHeight = 398; // 줄 간격 고정값
+  const totalRows = Math.ceil(schedule.length / gridColumns); // 총 줄 개수
 
-            <div className="w-3 h-3 bg-[#d9d9d9] rounded-full flex items-center justify-center" />
-            <span className="text-[#969696] text-2xl mt-[23px]">{item.event}</span>
-            {index < schedule.length - 1 && (
-              <div className="w-[757px] h-[1px] bg-white absolute top-[45px] left-10" />
-            )}
-          </div>
-        ))}
+  useEffect(() => {
+    const handleResize = () => {
+      setGridColumns(window.innerWidth >= 768 ? 4 : 2);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div className="w-full mt-[98px] pb-[324px] flex flex-col pr-[105px]">
+      <span className="text-gray0 subhead2 mb-[62px]">활동 계획</span>
+
+      <div className="relative w-full">
+        {Array.from({ length: totalRows }).map((_, rowIndex) => {
+          const isFirstRow = rowIndex === 0;
+          const isLastRow = rowIndex === totalRows - 1;
+
+          return (
+            <div
+              key={`line-${rowIndex}`}
+              className="absolute h-[1px]"
+              style={{
+                top: `${65 + rowIndex * rowHeight}px`,
+                right: isLastRow ? 'auto' : 'auto', // 마지막 줄 → 오른쪽 끝에서 끝나도록
+                left: isFirstRow ? '105px' : 'auto', // 첫 번째 줄 → 왼쪽 끝 시작
+                width: isFirstRow ? 'calc(100% - 105px)' : '100%', // 첫째 줄 & 마지막 줄 조정
+                background: isFirstRow
+                  ? 'linear-gradient(90deg, #FFF 87.5%, #000 100%)'
+                  : 'linear-gradient(270deg, #FFF 87.5%, #000 100%)',
+              }}
+            />
+          );
+        })}
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-24 gap-y-[180px] md:gap-x-6 md:gap-y-[180px] w-full">
+          {schedule.map((item, index) => (
+            <div key={index} className="flex flex-col items-center w-[210px] relative">
+              {/* 같은 달이면 날짜 한 번만 표시 */}
+              {index === 0 || item.date !== schedule[index - 1].date ? (
+                <span className="body1 text-gray6 mb-6">{item.date}</span>
+              ) : (
+                <span className="block h-[60px]" />
+              )}
+
+              {/* 일정 동그라미 */}
+              <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center" />
+
+              {/* 일정 이벤트 명 */}
+              <span className="subhead1-eng text-gray0 mt-8">{item.event}</span>
+
+              {/* 일정 상세 설명 */}
+              <span className="body2 w-[210px] text-gray6 mt-[18px] break-words">
+                {item.detail}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

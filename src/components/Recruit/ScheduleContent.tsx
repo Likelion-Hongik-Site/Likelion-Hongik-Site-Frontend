@@ -17,28 +17,33 @@ export const ScheduleContent = () => {
     },
   ];
   return (
-    <div className="w-full h-full mt-[105px]">
+    <div className="w-full h-full mt-[84px]">
       <div className="flex  flex-col gap-[42px]">
-        <div className="flex gap-[23px]">
-          <span className="text-white text-2xl">모집 일정</span>
-          <span className="text-[#969696] text-2xl">모집 일정</span>
+        <div className="flex gap-7">
+          <span className="text-gray0 subhead2">모집 일정</span>
+          <span className="text-gray4 body1">모집 일정</span>
         </div>
-        <div className="flex gap-[23px]">
-          <span className="text-white text-2xl">모집 대상</span>
-          <span className="text-[#969696] text-2xl">홍익대학교 재학생, 휴학생, 졸업유예생</span>
-        </div>
-        <span className="text-white text-2xl">트랙 소개</span>
-      </div>
-      <div className="flex flex-row gap-5 mt-[46px]">
-        {tracks.map((track, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-center w-[390px] h-[432px] bg-white/10 text-white rounded-[40px] pl-[37px] pr-[42px] gap-3"
-          >
-            <span className="text-xl text-white font-bold">{track.title}</span>
-            <span className="text-xl text-[#9f9f9f]">{track.subtitle}</span>
+        <div className="flex gap-7">
+          <span className="text-gray0 subhead2">모집 대상</span>
+          <div className="flex gap-[21px]">
+            <span className="text-gray4 body1">홍익대학교 재학생, 휴학생, 졸업유예생</span>
+            <span className="text-gray4 body1">(단, 반드시 1년간 활동이 가능해야합니다.)</span>
           </div>
-        ))}
+        </div>
+        <span className="text-gray0 subhead2">트랙 소개</span>
+      </div>
+      <div className="flex flex-row gap-5 mt-[46px] w-full overflow-x-auto pr-[105px]">
+        <div className="flex flex-nowrap gap-5">
+          {tracks.map((track, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center w-[395px] h-[432px] bg-gray9 text-white rounded-[40px] pl-[58px] pr-[57px] pt-[259px] pb-[52px] relative gap-3 shrink-0"
+            >
+              <span className="subhead3 text-gray0">{track.title}</span>
+              <span className="body3 text-gray4">{track.subtitle}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
