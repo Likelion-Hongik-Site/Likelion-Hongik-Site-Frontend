@@ -10,13 +10,13 @@ export const Navbar = () => {
         <img src={likelionLogo} alt="logo" className="cursor-pointer w-40 h-5 mr-4" onClick={() => nav('/')} />
         <div className="flex gap-[14px]">
           <Button href="https://www.instagram.com/likelion_hongik/">Instagram</Button>
-          <Button onClick={() => nav('/contact')}>Contact</Button>
+          <Button href="/contact" onClick={() => nav('/contact')}>Contact</Button>
         </div>
       </div>
       <div className="mr-10 flex items-center">
         <div className="flex gap-[14px]">
-          <Button onClick={() => nav('/archive')}>지난 활동</Button>
-          <Button onClick={() => nav('/recruit')}>지원하기</Button>
+          <Button href="/archive" onClick={() => nav('/archive')}>지난 활동</Button>
+          <Button href="/recruit" onClick={() => nav('/recruit')}>지원하기</Button>
         </div>
       </div>
     </nav>
