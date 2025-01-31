@@ -1,1 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-white: #ffffff;
+  --color-gray0: #fcfcfc;
+  --color-gray1: #e3e3e3;
+  --color-gray2: #c9c9c9;
+  --color-gray3: #b0b0b0;
+  --color-gray4: #969696;
+  --color-gray5: #7d7d7d;
+  --color-gray6: #636363;
+  --color-gray7: #4a4a4a;
+  --color-gray8: #303030;
+  --color-gray9: #171717;
+  --color-black: #000000;
+  --font-pretendard: 'Pretendard', 'sans-serif';
+  --font-gsans: 'GmarketSans', 'sans-serif';
+}
