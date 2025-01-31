@@ -1,1 +1,67 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  /* color */
+  --color-white: #ffffff;
+  --color-gray0: #fcfcfc;
+  --color-gray1: #e3e3e3;
+  --color-gray2: #c9c9c9;
+  --color-gray3: #b0b0b0;
+  --color-gray4: #969696;
+  --color-gray5: #7d7d7d;
+  --color-gray6: #636363;
+  --color-gray7: #4a4a4a;
+  --color-gray8: #303030;
+  --color-gray9: #171717;
+  --color-black: #000000;
+
+  /* font */
+  --font-pretendard: 'Pretendard', 'sans-serif';
+  --font-gsans: 'Gmarket Sans', 'sans-serif';
+
+  /* breakpoint 수정가능성 O */
+  --breakpoint-ph: 360px;
+  --breakpoint-dt: 1440px;
+}
+
+/* font */
+@layer components {
+  /* 한글 */
+  .heading1 {
+    @apply font-semibold text-[140px] leading-[150%] tracking-[-0.6%] font-pretendard;
+  }
+  .subhead1 {
+    @apply font-bold text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead2 {
+    @apply font-semibold text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead3 {
+    @apply font-semibold text-[20px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body1 {
+    @apply font-[400] text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body2 {
+    @apply font-[400] text-[20px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body3 {
+    @apply font-[400] text-[18px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .caption1 {
+    @apply font-medium text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  /* 영문 */
+  .heading1-eng {
+    @apply font-medium text-[160px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .subhead1-eng {
+    @apply font-bold text-[24px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .body1-eng {
+    @apply font-medium text-[24px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .caption1-eng {
+    @apply font-medium text-[13px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+}
