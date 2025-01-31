@@ -1,3 +1,3 @@
 export const HomePage = () => {
-  return <div className="text-gray5 font-gsans">HOMEPAGE</div>;
+  return <div className="heading1">멋쟁이사자처럼</div>;
 };
