@@ -1,12 +1,12 @@
-import rightArrow from '@/assets/svgs/pages/home/rightArrow.svg';
 import { useNavigate } from 'react-router-dom';
+import rightArrow from '@/assets/svgs/pages/home/rightArrow.svg';
 
 export const HomePage = () => {
   const nav = useNavigate();
 
   return (
     <div className="w-full flex flex-col items-center">
-      <p className="heading1 text-white mt-[100px]">멋쟁이사자처럼</p>
+      <h1 className="heading1 text-white mt-[100px]">멋쟁이사자처럼</h1>
       <div className="body1 text-gray7 flex flex-col items-center mt-[14px]">
         <p>‘멋쟁이사자처럼’은 국내 최대 규모의 전국 대학 연합 IT 동아리입니다.</p>
         <p>코딩을 모르더라도 함께 배우며 아이디어를 실현하려는 열정만 있다면 지원 가능합니다.</p>
