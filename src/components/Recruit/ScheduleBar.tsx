@@ -19,6 +19,8 @@ export const ScheduleBar = () => {
   const [gridColumns, setGridColumns] = useState(window.innerWidth >= 768 ? 4 : 2);
   const rowHeight = 398; // 줄 간격 고정값
   const totalRows = Math.ceil(schedule.length / gridColumns); // 총 줄 개수
+  const lastCircleIndex = schedule.length - 1; // 마지막 일정 인덱스
+  const lastRowLimit = lastCircleIndex % gridColumns;
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +31,7 @@ export const ScheduleBar = () => {
   }, []);
 
   return (
-    <div className="w-full mt-[98px] pb-[324px] flex flex-col pr-[105px]">
+    <div className="w-full mt-[98px] pb-[324px] flex flex-col">
       <span className="text-gray0 subhead2 mb-[62px]">활동 계획</span>
 
       <div className="relative w-full">
@@ -37,15 +39,19 @@ export const ScheduleBar = () => {
           const isFirstRow = rowIndex === 0;
           const isLastRow = rowIndex === totalRows - 1;
 
+          let lineWidth = '100%';
+          if (isLastRow) {
+            lineWidth = `${((lastRowLimit + 1) / gridColumns) * 85}%`;
+          }
+
           return (
             <div
               key={`line-${rowIndex}`}
               className="absolute h-[1px]"
               style={{
                 top: `${65 + rowIndex * rowHeight}px`,
-                right: isLastRow ? 'auto' : 'auto', // 마지막 줄 → 오른쪽 끝에서 끝나도록
-                left: isFirstRow ? '105px' : 'auto', // 첫 번째 줄 → 왼쪽 끝 시작
-                width: isFirstRow ? 'calc(100% - 105px)' : '100%', // 첫째 줄 & 마지막 줄 조정
+                left: isFirstRow ? '105px' : '0px',
+                width: lineWidth,
                 background: isFirstRow
                   ? 'linear-gradient(90deg, #FFF 87.5%, #000 100%)'
                   : 'linear-gradient(270deg, #FFF 87.5%, #000 100%)',
