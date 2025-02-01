@@ -6,7 +6,7 @@ import likelion from '@/assets/webps/layout/likelion.webp';
 export const Navbar = () => {
   const nav = useNavigate();
   return (
-    <nav className="w-full bg-black h-[88px] fixed flex items-center justify-between">
+    <nav className="w-full bg-black h-[88px] fixed flex items-center justify-between z-999">
       <div className="ml-11 flex items-center">
         <div className="flex items-center mr-4 cursor-pointer" onClick={() => nav('/')}>
           <img src={logo} alt="logo" className="w-[25px] h-[25px] mr-[10px]" />
