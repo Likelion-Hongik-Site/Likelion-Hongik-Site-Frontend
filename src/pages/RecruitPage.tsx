@@ -17,7 +17,7 @@ export const RecruitPage = () => {
       </div>
       <div className="flex items-center gap-[18px] mt-10">
         <button
-          className={`flex items-center justify-center subhead2 px-7 py-4 ph:px-[18px] ph:py-[10px] rounded-[100px] text-center cursor-pointer
+          className={`flex items-center justify-center subhead2 px-7 py-4 rounded-[100px] text-center cursor-pointer
             ${selected === 'schedule' ? 'text-black bg-blue2' : 'text-blue2 bg-black'}`}
           onClick={() => setSelected('schedule')}
         >
@@ -28,7 +28,7 @@ export const RecruitPage = () => {
           href={applicationFormURL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center subhead2 px-7 py-4 ph:px-[18px] ph:py-[10px] rounded-[100px] bg-black text-blue2 text-center cursor-pointer border-blue2 ring-1 hover:bg-blue2 hover:text-black transition"
+          className="flex items-center justify-center subhead2 px-7 py-4 rounded-[100px] bg-black text-blue2 text-center cursor-pointer border-blue2 ring-1 hover:bg-blue2 hover:text-black transition"
         >
           지원 폼 작성하기
         </a>
