@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ScheduleContent } from '@/components/recruit/ScheduleContent';
-import { ScheduleBar } from '@/components/recruit/ScheduleBar';
+import { useState } from 'react';
+import { ScheduleBar } from '@/components/Recruit/ScheduleBar';
+import { ScheduleContent } from '@/components/Recruit/ScheduleContent';
 
 export const RecruitPage = () => {
   const [selected, setSelected] = useState('schedule');

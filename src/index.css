@@ -52,6 +52,43 @@
   .caption1 {
     @apply font-medium text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
   }
+  /* 한글 phone */
+  .heading1-ph {
+    @apply font-semibold text-[65px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead1-ph {
+    @apply font-bold text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead2-ph {
+    @apply font-semibold text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead3-ph {
+    @apply font-semibold text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead4-ph {
+    @apply font-semibold text-[13px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead5-ph {
+    @apply font-bold text-[12px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .subhead6-ph {
+    @apply font-semibold text-[12px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body1-ph {
+    @apply font-medium text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body2-ph {
+    @apply font-[400] text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .body3-ph {
+    @apply font-[400] text-[10px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .caption1-ph {
+    @apply font-bold text-[9px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
+  .caption2-ph {
+    @apply font-medium text-[8px] leading-[150%] tracking-[-0.8%] font-pretendard;
+  }
   /* 영문 */
   .heading1-eng {
     @apply font-medium text-[160px] leading-[150%] tracking-[-0.8%] font-gsans;
@@ -64,5 +101,18 @@
   }
   .caption1-eng {
     @apply font-medium text-[13px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  /* 영문 phone */
+  .heading1-eng-ph {
+    @apply font-medium text-[46px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .subhead1-eng-ph {
+    @apply font-medium text-[14px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .subhead2-eng-ph {
+    @apply font-medium text-[13px] leading-[150%] tracking-[-0.8%] font-gsans;
+  }
+  .subhead3-eng-ph {
+    @apply font-medium text-[12px] leading-[150%] tracking-[-0.8%] font-gsans;
   }
 }
