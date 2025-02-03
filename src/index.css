@@ -20,9 +20,9 @@
   --font-pretendard: 'Pretendard', 'sans-serif';
   --font-gsans: 'Gmarket Sans', 'sans-serif';
 
-  /* breakpoint 수정가능성 O */
+  /* breakpoint */
   --breakpoint-ph: 360px;
-  --breakpoint-dt: 1440px;
+  --breakpoint-dt: 1220px;
 }
 
 /* font */
