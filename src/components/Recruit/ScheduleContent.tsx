@@ -21,7 +21,7 @@ export const ScheduleContent = () => {
       <div className="flex  flex-col gap-[42px]">
         <div className="flex gap-7">
           <span className="text-gray0 subhead2">모집 일정</span>
-          <span className="text-gray4 body1">모집 일정</span>
+          <span className="text-gray4 body1">2025년 2월 17일~ 2025년 3월 6일 24:00</span>
         </div>
         <div className="flex gap-7">
           <span className="text-gray0 subhead2">모집 대상</span>

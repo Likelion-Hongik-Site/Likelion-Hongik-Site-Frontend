@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 export const ScheduleBar = () => {
   const schedule = [
     { date: '3월', event: 'OT', detail: '멋쟁이사자처럼 13기 출발!' },
-    { date: '3월', event: 'MT', detail: '친목도모 엠티 운영진들의 차력쇼 고기구워먹기 냠냠' },
-    { date: '5월', event: '아이디어톤', detail: '아이디어톤 설명 아이디어톤 설명 아이디어톤 설명' },
+    { date: '3월', event: 'MT', detail: '바닷가에서 진행하는 첫 네트워킹 행사' },
+    { date: '5월', event: '아이디어톤', detail: '아이디어 뿜뿜 행사' },
+    { date: '7월', event: '방학 세션', detail: '해커톤 전 실력 올리기!' },
     { date: '7월', event: '애거돈', detail: '멋사 홍대에서만 진행하는 실전 대비 무박2일 해커톤' },
-    { date: '7월', event: '방학 세션', detail: '방학세션 설명 방학세션 설명' },
     {
       date: '8월',
       event: '중앙 해커톤',
@@ -41,7 +41,7 @@ export const ScheduleBar = () => {
 
           let lineWidth = '100%';
           if (isLastRow) {
-            lineWidth = `${((lastRowLimit + 1) / gridColumns) * 85}%`;
+            lineWidth = `${((lastRowLimit + 1) / gridColumns) * 93}%`;
           }
 
           return (
@@ -61,27 +61,41 @@ export const ScheduleBar = () => {
         })}
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-x-24 gap-y-[180px] md:gap-x-6 md:gap-y-[180px] w-full">
-          {schedule.map((item, index) => (
-            <div key={index} className="flex flex-col items-center w-[210px] relative">
-              {/* 같은 달이면 날짜 한 번만 표시 */}
-              {index === 0 || item.date !== schedule[index - 1].date ? (
-                <span className="body1 text-gray6 mb-6">{item.date}</span>
-              ) : (
-                <span className="block h-[60px]" />
-              )}
+          {schedule.map((item, index) => {
+            // 현재 항목이 몇 번째 줄에 있는지 계산
+            const rowIndex = Math.floor(index / gridColumns);
 
-              {/* 일정 동그라미 */}
-              <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center" />
+            return (
+              <div
+                key={index}
+                className={`flex flex-col items-center w-[210px] relative transition-all`}
+                style={{
+                  transform: rowIndex % 2 === 1 ? 'translateX(98px)' : 'translateX(0px)',
+                }}
+              >
+                {/* 같은 달이면 날짜 한 번만 표시 */}
+                {index === 0 || item.date !== schedule[index - 1].date ? (
+                  <span className="body1 text-gray6 mb-6">{item.date}</span>
+                ) : (
+                  <span className="block h-[60px]" />
+                )}
 
-              {/* 일정 이벤트 명 */}
-              <span className="subhead1-eng text-gray0 mt-8">{item.event}</span>
-
-              {/* 일정 상세 설명 */}
-              <span className="body2 w-[210px] text-gray6 mt-[18px] break-words">
-                {item.detail}
-              </span>
-            </div>
-          ))}
+                <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center" />
+                <span className="subhead1 text-gray0 mt-8">{item.event}</span>
+                <span className="body2 w-[210px] text-gray6 mt-[18px] text-center">
+                  {item.detail.includes('바닷가에서 진행하는') ? (
+                    <>
+                      <span className="whitespace-nowrap">바닷가에서 진행하는</span>
+                      <br />
+                      {item.detail.replace('바닷가에서 진행하는 ', '')}
+                    </>
+                  ) : (
+                    item.detail
+                  )}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
