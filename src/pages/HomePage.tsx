@@ -14,7 +14,7 @@ export const HomePage = () => {
       <div className="flex flex-col gap-3 subhead3 mt-9">
         <p className="flex gap-4">
           <span className="text-gray0">모집 기간</span>
-          <span className="text-gray4">2025. 2. 17~ 2025. 3. 9</span>
+          <span className="text-gray4">2025년 2월 17일 ~ 3월 6일 24:00</span>
         </p>
         <p className="flex gap-4">
           <span className="text-gray0">모집 대상</span>
