@@ -26,7 +26,7 @@
   @media (max-width: 1219px) {
     /* ph 한글 폰트 */
     .ph\:heading1 {
-      font-size: 65px !important;
+      font-size: 45px !important;
       line-height: 150%;
       letter-spacing: -0.8%;
       font-weight: 600;
