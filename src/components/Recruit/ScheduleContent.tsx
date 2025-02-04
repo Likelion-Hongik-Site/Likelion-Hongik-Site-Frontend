@@ -18,19 +18,19 @@ export const ScheduleContent = () => {
   ];
   return (
     <div className="w-full h-full mt-[84px]">
-      <div className="flex  flex-col gap-[42px]">
+      <div className="flex flex-col gap-[42px]">
         <div className="flex gap-7">
-          <span className="text-gray0 subhead2">모집 일정</span>
-          <span className="text-gray4 body1">2025년 2월 17일~ 2025년 3월 6일 24:00</span>
+          <span className="text-gray0 dt:subhead2">모집 일정</span>
+          <span className="text-gray4 dt:body1">모집 일정</span>
         </div>
         <div className="flex gap-7">
-          <span className="text-gray0 subhead2">모집 대상</span>
+          <span className="text-gray0 dt:subhead2">모집 대상</span>
           <div className="flex gap-[21px]">
-            <span className="text-gray4 body1">홍익대학교 재학생, 휴학생, 졸업유예생</span>
-            <span className="text-gray4 body1">(단, 반드시 1년간 활동이 가능해야합니다.)</span>
+            <span className="text-gray4 dt:body1">홍익대학교 재학생, 휴학생, 졸업유예생</span>
+            <span className="text-gray4 dt:body1">(단, 반드시 1년간 활동이 가능해야합니다.)</span>
           </div>
         </div>
-        <span className="text-gray0 subhead2">트랙 소개</span>
+        <span className="text-gray0 dt:subhead2">트랙 소개</span>
       </div>
       <div className="flex flex-row gap-5 mt-[46px] w-full overflow-x-auto pr-[105px]">
         <div className="flex flex-nowrap gap-5">
@@ -39,8 +39,8 @@ export const ScheduleContent = () => {
               key={index}
               className="flex flex-col justify-center w-[395px] h-[432px] bg-gray9 text-white rounded-[40px] pl-[58px] pr-[57px] pt-[259px] pb-[52px] relative gap-3 shrink-0"
             >
-              <span className="subhead3 text-gray0">{track.title}</span>
-              <span className="body3 text-gray4">{track.subtitle}</span>
+              <span className="dt:subhead3 text-gray0">{track.title}</span>
+              <span className="dt:body3 text-gray4">{track.subtitle}</span>
             </div>
           ))}
         </div>

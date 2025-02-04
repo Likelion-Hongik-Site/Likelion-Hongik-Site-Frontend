@@ -32,7 +32,7 @@ export const ScheduleBar = () => {
 
   return (
     <div className="w-full mt-[98px] pb-[324px] flex flex-col">
-      <span className="text-gray0 subhead2 mb-[62px]">활동 계획</span>
+      <span className="text-gray0 dt:subhead2 mb-[62px]">활동 계획</span>
 
       <div className="relative w-full">
         {Array.from({ length: totalRows }).map((_, rowIndex) => {
@@ -75,14 +75,14 @@ export const ScheduleBar = () => {
               >
                 {/* 같은 달이면 날짜 한 번만 표시 */}
                 {index === 0 || item.date !== schedule[index - 1].date ? (
-                  <span className="body1 text-gray6 mb-6">{item.date}</span>
+                  <span className="dt:body1 text-gray6 mb-6">{item.date}</span>
                 ) : (
                   <span className="block h-[60px]" />
                 )}
 
                 <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center" />
-                <span className="subhead1 text-gray0 mt-8">{item.event}</span>
-                <span className="body2 w-[210px] text-gray6 mt-[18px] text-center">
+                <span className="dt:subhead1 text-gray0 mt-8">{item.event}</span>
+                <span className="dt:body2 w-[210px] text-gray6 mt-[18px] text-center">
                   {item.detail.includes('바닷가에서 진행하는') ? (
                     <>
                       <span className="whitespace-nowrap">바닷가에서 진행하는</span>
