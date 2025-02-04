@@ -14,12 +14,16 @@ export const ProfileCard = ({ profile }: ProfileCardData) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative rounded-full w-[96px] h-[96px] bg-gray9">
+      <div className="relative rounded-full ph:w-[72px] ph:h-[72px] dt:w-[96px] dt:h-[96px] bg-gray9">
         <ProfilePart part={part} />
       </div>
-      <span className="text-gray0 dt:subhead3 mt-[21px]">{name}</span>
-      <span className="mt-[6px] text-gray7 dt:caption1 truncate">{department}</span>
-      <span className="mt-[2px] text-gray7 dt:caption1 truncate mb-[42px]">{phoneNumber}</span>
+      <span className="text-gray0 ph:subhead4 dt:subhead3 ph:mt-[19px] dt:mt-[21px]">{name}</span>
+      <span className="ph:mt-[7px] dt:mt-[6px] text-gray7 ph:caption2 dt:caption1 truncate">
+        {department}
+      </span>
+      <span className="mt-[2px] text-gray7 ph:caption2 dt:caption1 truncate dt:mb-[42px]">
+        {phoneNumber}
+      </span>
     </div>
   );
 };

@@ -8,7 +8,7 @@ export const Layout = () => {
       <div className="dt:min-w-screen flex flex-col dt:items-center ph:max-w-[440px] ph:items-start bg-black ph:px-2">
         <GradientCursor />
         <Navbar />
-        <main className="mt-[88px]">
+        <main className="ph:mt-5 dt:mt-[88px]">
           <Outlet />
         </main>
       </div>
