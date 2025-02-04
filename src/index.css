@@ -16,103 +16,218 @@
   --color-black: #000000;
   --color-blue2: #5f9aff;
 
-  /* font */
-  --font-pretendard: 'Pretendard', 'sans-serif';
-  --font-gsans: 'Gmarket Sans', 'sans-serif';
-
   /* breakpoint */
   --breakpoint-ph: 360px;
   --breakpoint-dt: 1220px;
 }
 
 /* font */
-@layer components {
-  /* 한글 */
-  .heading1 {
-    @apply font-semibold text-[140px] leading-[150%] tracking-[-0.6%] font-pretendard;
+@layer utilities {
+  @media (max-width: 1219px) {
+    /* ph 한글 폰트 */
+    .ph\:heading1 {
+      font-size: 45px !important;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-weight: 600;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead1 {
+      font-size: 16px !important;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead2 {
+      font-size: 16px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead3 {
+      font-size: 14px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead4 {
+      font-size: 13px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead5 {
+      font-size: 12px !important;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:subhead6 {
+      font-size: 12px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:body1 {
+      font-size: 16px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:body2 {
+      font-size: 14px !important;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:body3 {
+      font-size: 10px !important;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:caption1 {
+      font-size: 9px !important;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .ph\:caption2 {
+      font-size: 8px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    /* ph 영문 폰트 */
+    .ph\:heading1-eng {
+      font-size: 46px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .ph\:subhead1-eng {
+      font-size: 14px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .ph\:subhead2-eng {
+      font-size: 13px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .ph\:subhead3-eng {
+      font-size: 12px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
   }
-  .subhead1 {
-    @apply font-bold text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead2 {
-    @apply font-semibold text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead3 {
-    @apply font-semibold text-[20px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body1 {
-    @apply font-[400] text-[24px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body2 {
-    @apply font-[400] text-[20px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body3 {
-    @apply font-[400] text-[18px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .caption1 {
-    @apply font-medium text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  /* 한글 phone */
-  .heading1-ph {
-    @apply font-semibold text-[65px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead1-ph {
-    @apply font-bold text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead2-ph {
-    @apply font-semibold text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead3-ph {
-    @apply font-semibold text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead4-ph {
-    @apply font-semibold text-[13px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead5-ph {
-    @apply font-bold text-[12px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .subhead6-ph {
-    @apply font-semibold text-[12px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body1-ph {
-    @apply font-medium text-[16px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body2-ph {
-    @apply font-[400] text-[14px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .body3-ph {
-    @apply font-[400] text-[10px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .caption1-ph {
-    @apply font-bold text-[9px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  .caption2-ph {
-    @apply font-medium text-[8px] leading-[150%] tracking-[-0.8%] font-pretendard;
-  }
-  /* 영문 */
-  .heading1-eng {
-    @apply font-medium text-[160px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .subhead1-eng {
-    @apply font-bold text-[24px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .body1-eng {
-    @apply font-medium text-[24px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .caption1-eng {
-    @apply font-medium text-[13px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  /* 영문 phone */
-  .heading1-eng-ph {
-    @apply font-medium text-[46px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .subhead1-eng-ph {
-    @apply font-medium text-[14px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .subhead2-eng-ph {
-    @apply font-medium text-[13px] leading-[150%] tracking-[-0.8%] font-gsans;
-  }
-  .subhead3-eng-ph {
-    @apply font-medium text-[12px] leading-[150%] tracking-[-0.8%] font-gsans;
+
+  @media (min-width: 1220px) {
+    /* dt 한글 폰트 */
+    .dt\:heading1 {
+      font-size: 140px !important;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-weight: 600;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:subhead1 {
+      font-size: 24px !important;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:subhead2 {
+      font-size: 24px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:subhead3 {
+      font-size: 20px !important;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:body1 {
+      font-size: 24px !important;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:body2 {
+      font-size: 20px !important;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:body3 {
+      font-size: 18px !important;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+    .dt\:caption1 {
+      font-size: 14px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    /* dt 영문 폰트 */
+    .dt\:heading1-eng {
+      font-size: 160px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .dt\:subhead1-eng {
+      font-size: 24px !important;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .dt\:body1-eng {
+      font-size: 24px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
+    .dt\:caption1-eng {
+      font-size: 13px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Gmarket Sans', sans-serif;
+    }
   }
 }
