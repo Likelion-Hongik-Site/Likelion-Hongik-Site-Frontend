@@ -4,12 +4,14 @@ import { GradientCursor } from '@/components/ui/gradientCursor';
 
 export const Layout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-black">
-      <GradientCursor />
-      <Navbar />
-      <main className="mt-[88px]">
-        <Outlet />
-      </main>
+    <div className="min-h-screen w-full flex flex-col items-center bg-black">
+      <div className="dt:min-w-screen flex flex-col ph:max-w-[375px] bg-black ph:px-2">
+        <GradientCursor />
+        <Navbar />
+        <main className="mt-[88px]">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
