@@ -17,7 +17,6 @@ export const ScheduleBar = () => {
   ];
 
   const [gridColumns, setGridColumns] = useState(window.innerWidth >= 768 ? 4 : 2);
-  const rowHeight = 398; // 줄 간격 고정값
   const totalRows = Math.ceil(schedule.length / gridColumns); // 총 줄 개수
   const lastCircleIndex = schedule.length - 1; // 마지막 일정 인덱스
   const lastRowLimit = lastCircleIndex % gridColumns;
@@ -31,8 +30,8 @@ export const ScheduleBar = () => {
   }, []);
 
   return (
-    <div className="w-full mt-[98px] pb-[324px] flex flex-col">
-      <span className="text-gray0 dt:subhead2 mb-[62px]">활동 계획</span>
+    <div className="w-full dt:mt-[98px] ph:mt-7 dt:pb-[324px] ph:pb-[87px] flex flex-col">
+      <span className="text-gray0 dt:subhead2 dt:mb-[62px] ph:mb-2">활동 계획</span>
 
       <div className="relative w-full">
         {Array.from({ length: totalRows }).map((_, rowIndex) => {
@@ -47,10 +46,9 @@ export const ScheduleBar = () => {
           return (
             <div
               key={`line-${rowIndex}`}
-              className="absolute h-[1px]"
+              className={`absolute h-[1px] ${isFirstRow ? 'dt:left-[105px] ph:left-[87px]' : 'left-0'}`}
               style={{
-                top: `${65 + rowIndex * rowHeight}px`,
-                left: isFirstRow ? '105px' : '0px',
+                top: `${65 + rowIndex * (window.innerWidth >= 1220 ? 398 : 180)}px`,
                 width: lineWidth,
                 background: isFirstRow
                   ? 'linear-gradient(90deg, #FFF 87.5%, #000 100%)'
@@ -60,7 +58,7 @@ export const ScheduleBar = () => {
           );
         })}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-24 gap-y-[180px] md:gap-x-6 md:gap-y-[180px] w-full">
+        <div className="grid ph:grid-cols-2 dt:grid-cols-4 gap-x-24 gap-y-[180px] ph:gap-x-4 ph:gap-y-12 w-full">
           {schedule.map((item, index) => {
             // 현재 항목이 몇 번째 줄에 있는지 계산
             const rowIndex = Math.floor(index / gridColumns);
@@ -68,21 +66,27 @@ export const ScheduleBar = () => {
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center w-[210px] relative transition-all`}
-                style={{
-                  transform: rowIndex % 2 === 1 ? 'translateX(98px)' : 'translateX(0px)',
-                }}
+                className={`flex flex-col items-center dt:w-[210px] ph:w-[104px] relative transition-all 
+    ${rowIndex % 2 === 1 ? 'dt:translate-x-[98px]' : 'dt:translate-x-0'}`}
               >
                 {/* 같은 달이면 날짜 한 번만 표시 */}
                 {index === 0 || item.date !== schedule[index - 1].date ? (
-                  <span className="dt:body1 text-gray6 mb-6">{item.date}</span>
+                  <span className="dt:body1 text-gray6 dt:mb-6 ph:mb-3">{item.date}</span>
                 ) : (
-                  <span className="block h-[60px]" />
+                  <span className="block dt:h-[60px] ph:h-10" />
                 )}
 
-                <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center" />
-                <span className="dt:subhead1 text-gray0 mt-8">{item.event}</span>
-                <span className="dt:body2 w-[210px] text-gray6 mt-[18px] text-center">
+                <div className="dt:w-3 dt:h-3 ph:w-[6px] ph:h-[6px] bg-white rounded-full flex items-center justify-center" />
+                <span
+                  className={`text-gray0 dt:mt-8 ph:mt-[27px] ${
+                    /[a-zA-Z]/.test(item.event)
+                      ? 'dt:subhead1-eng ph:subhead3-eng'
+                      : 'dt:subhead1 ph:subhead5'
+                  }`}
+                >
+                  {item.event}
+                </span>
+                <span className="dt:body2 ph:body3 dt:w-[210px] ph:w-[105px] text-gray6 dt:mt-[18px] ph:mt-[6px] text-center">
                   {item.detail.includes('바닷가에서 진행하는') ? (
                     <>
                       <span className="whitespace-nowrap">바닷가에서 진행하는</span>
