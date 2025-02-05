@@ -13,7 +13,7 @@ export const Button = ({ children, onClick, href }: ButtonProps) => {
 
   const handleClick = () => {
     if (href === 'https://www.instagram.com/likelion_hongik/') {
-      window.open(href, '_blank');
+      window.open(href, '_blank', 'noopener,noreferrer');
       return;
     }
 
@@ -28,7 +28,9 @@ export const Button = ({ children, onClick, href }: ButtonProps) => {
       className={`cursor-pointer px-6 py-[10px] bg-gray9 hover:bg-gray8 transition duration-200 ease-in-out rounded-[120px] flex justify-center items-center 
         ${isActive ? 'ring-1 ring-gray2 ring-inset transition duration-200 ease-in-out' : ''}`}
     >
-      <span className={`text-gray1 h-5 ${isKorean ? 'dt:caption1' : 'dt:caption1-eng'}`}>{children}</span>
+      <span className={`text-gray1 h-5 ${isKorean ? 'dt:caption1' : 'dt:caption1-eng'}`}>
+        {children}
+      </span>
     </button>
   );
 };
