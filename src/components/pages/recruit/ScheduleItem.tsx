@@ -13,6 +13,9 @@ interface ScheduleItemProps {
 export const ScheduleItem = ({ item, index, gridColumns }: ScheduleItemProps) => {
   const rowIndex = Math.floor(index / gridColumns);
   const showDate = index === 0 || item.date !== ScheduleData[index - 1].date;
+  const isEnglish = /[a-zA-Z]/.test(item.event);
+  const dtClass = isEnglish ? 'dt:subhead1-eng' : 'dt:subhead1';
+  const phClass = isEnglish ? 'ph:subhead3-eng' : 'ph:subhead5';
 
   return (
     <div
@@ -31,15 +34,8 @@ export const ScheduleItem = ({ item, index, gridColumns }: ScheduleItemProps) =>
       <div className="dt:w-3 dt:h-3 ph:w-[6px] ph:h-[6px] bg-white rounded-full flex items-center justify-center" />
 
       {/* 이벤트 이름 */}
-      <span
-        className={`text-gray0 dt:mt-8 ph:mt-3 ${
-          /[a-zA-Z]/.test(item.event)
-            ? 'dt:subhead1-eng ph:subhead3-eng'
-            : 'dt:subhead1 ph:subhead5'
-        }`}
-      >
-        {item.event}
-      </span>
+
+      <span className={`text-gray0 dt:mt-8 ph:mt-3 ${dtClass} ${phClass}`}>{item.event}</span>
 
       {/* 상세 설명 */}
       <span className="dt:body2 ph:body3 dt:w-[210px] ph:w-[105px] text-gray6 dt:mt-[18px] ph:mt-[6px] text-center">

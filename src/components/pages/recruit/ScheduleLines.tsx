@@ -16,7 +16,7 @@ export const ScheduleLines = ({
         const isFirstRow = rowIndex === 0;
         const isLastRow = rowIndex === totalRows - 1;
         const phlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 78}%` : '100%';
-        const dtlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 89}%` : '100%';
+        const dtlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 97}%` : '100%';
 
         return (
           <div
@@ -25,8 +25,8 @@ export const ScheduleLines = ({
               isFirstRow
                 ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
                 : isLastRow
-                  ? 'dt:left-[120px] ph:left-0 ph:w-[232px]'
-                  : 'dt:left-[15px] ph:left-0 ph:w-[319px] dt:w-full'
+                  ? 'dt:left-[15px] ph:left-0'
+                  : 'ph:left-0 ph:w-[319px]'
             }`}
             style={{
               top: `${(screenWidth >= 1220 ? 65 : 26.5) + rowIndex * (screenWidth >= 1220 ? 290 : 112)}px`,
