@@ -23,7 +23,7 @@ export const ScheduleLines = ({
             key={`line-${rowIndex}`}
             className={`absolute h-[1px] dt:w-full ${
               isFirstRow
-                ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-full'
+                ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
                 : isLastRow
                   ? 'dt:left-[120px] ph:left-0 ph:w-[232px]'
                   : 'dt:left-[15px] ph:left-0 ph:w-[319px] dt:w-full'
