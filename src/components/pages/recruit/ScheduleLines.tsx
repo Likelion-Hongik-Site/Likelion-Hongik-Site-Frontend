@@ -21,7 +21,7 @@ export const ScheduleLines = ({
         return (
           <div
             key={`line-${rowIndex}`}
-            className={`absolute h-[1px] dt:w-full ${
+            className={`absolute h-[1px] ${
               isFirstRow
                 ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
                 : isLastRow
