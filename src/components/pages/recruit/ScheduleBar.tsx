@@ -34,13 +34,13 @@ export const ScheduleBar = () => {
               key={`line-${rowIndex}`}
               className={`absolute h-[1px] dt:w-full ${
                 isFirstRow
-                  ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[232px] dt:max-w-full'
+                  ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-full'
                   : isLastRow
                     ? 'dt:left-[120px] ph:left-0 ph:w-[232px]'
                     : 'dt:left-[15px] ph:left-0 ph:w-[319px] dt:w-full'
               }`}
               style={{
-                top: `${(screenWidth >= 1220 ? 65 : 26) + rowIndex * (screenWidth >= 1220 ? 290 : 110)}px`,
+                top: `${(screenWidth >= 1220 ? 65 : 26.5) + rowIndex * (screenWidth >= 1220 ? 290 : 112)}px`,
                 width: screenWidth >= 1220 ? dtlineWidth : phlineWidth,
                 background: isFirstRow
                   ? 'linear-gradient(90deg, #FFF 87.5%, #000 100%)'
@@ -61,7 +61,7 @@ export const ScheduleBar = () => {
           return (
             <div
               key={index}
-              className={`flex flex-col items-center dt:w-[208px] ph:w-[104px] ph:h-auto relative transition-all 
+              className={`flex flex-col items-center dt:w-[208px] ph:w-[104px] ph:h-24 dt:h-[218px] relative transition-all 
     ${rowIndex % 2 === 1 ? 'dt:translate-x-[98px]' : 'dt:translate-x-0'}`}
             >
               {/* 같은 달이면 날짜 한 번만 표시 */}
@@ -75,7 +75,7 @@ export const ScheduleBar = () => {
 
               <div className="dt:w-3 dt:h-3 ph:w-[6px] ph:h-[6px] bg-white rounded-full flex items-center justify-center" />
               <span
-                className={`text-gray0 dt:mt-8 ph:mt-[15px] ${
+                className={`text-gray0 dt:mt-8 ph:mt-3 ${
                   /[a-zA-Z]/.test(item.event)
                     ? 'dt:subhead1-eng ph:subhead3-eng'
                     : 'dt:subhead1 ph:subhead5'
