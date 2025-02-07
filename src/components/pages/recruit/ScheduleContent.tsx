@@ -19,7 +19,13 @@ export const ScheduleContent = () => {
         </div>
         <span className="text-gray0 dt:subhead2 ph:subhead3">트랙 소개</span>
       </div>
-      <div className="flex flex-row dt:gap-5 ph:gap-2 dt:mt-[46px] ph:mt-2 ph:max-w-[347px] dt:max-w-[1230px] ph:pr-7 ph:overflow-x-auto dt:overflow-x-hidden">
+      <div
+        className={`flex flex-row dt:gap-5 ph:gap-2 dt:mt-[46px] ph:mt-2 ph:max-w-[347px] dt:max-w-[1230px] ph:pr-7 ph:overflow-x-auto dt:overflow-x-hidden ph:[&::-webkit-scrollbar]:hidden dt:[&::-webkit-scrollbar]:block`}
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}
+      >
         <div className="flex flex-nowrap dt:gap-5 ph:gap-3">
           {TrackData.map((track, index) => (
             <div
