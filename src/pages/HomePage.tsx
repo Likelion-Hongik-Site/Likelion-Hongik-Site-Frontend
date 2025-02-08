@@ -6,7 +6,7 @@ export const HomePage = () => {
   const nav = useNavigate();
 
   return (
-    <div className="w-full flex flex-col ph:itmes-start dt:items-center">
+    <div className="w-full flex flex-col ph:items-start dt:items-center">
       <h1 className="ph:heading1 dt:heading1 text-white ph:ml-[26px] ph:mt-5 dt:mt-[100px]">
         멋쟁이사자처럼
       </h1>

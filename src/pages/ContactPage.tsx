@@ -1,4 +1,5 @@
-import { ProfileCardList } from '@/components/pages/contact/ProfileCardList';
+import { ProfileCard } from '@/components/pages/contact/ProfileCard';
+import { ProfileData } from '@/data/ProfileData';
 
 export const ContactPage = () => {
   return (
@@ -17,8 +18,31 @@ export const ContactPage = () => {
         <p className="ph:mt-3 dt:mt-5 text-white ph:subhead3 dt:subhead2 ph:ml-7 dt:ml-[104px]">
           13기 운영진
         </p>
-        <ul className="ph:mx-7 dt:m-auto ph:mt-[13px] dt:mt-[26px] dt:flex dt:gap-[48px] ph:grid ph:grid-cols-4 ph:grid-rows-2 ph:gap-x-[10px] ph:gap-y-8">
-          <ProfileCardList />
+        <ul className="dt:flex ph:hidden m-auto mt-[26px] gap-[48px]">
+          {ProfileData.map((profile, index) => (
+            <li key={index}>
+              <ProfileCard profile={profile} />
+            </li>
+          ))}
+        </ul>
+
+        <ul className="dt:hidden ph:flex ph:max-w-[384px] ph:flex-col ph:w-full mx-7 mt-[13px] gap-8">
+          {/* 첫 번째 줄 (4개) */}
+          <div className="flex justify-between w-[calc(100vw-56px)] max-w-[384px]">
+            {ProfileData.slice(0, 4).map((profile, index) => (
+              <li key={index} className="flex justify-center">
+                <ProfileCard profile={profile} />
+              </li>
+            ))}
+          </div>
+          {/* 두 번째 줄 (4개) */}
+          <div className="flex justify-between w-[calc(100vw-56px)] max-w-[384px]">
+            {ProfileData.slice(4, 8).map((profile, index) => (
+              <li key={index} className="flex justify-center">
+                <ProfileCard profile={profile} />
+              </li>
+            ))}
+          </div>
         </ul>
       </div>
     </div>
