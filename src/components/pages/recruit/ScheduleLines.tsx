@@ -23,10 +23,10 @@ export const ScheduleLines = ({
             key={`line-${rowIndex}`}
             className={`absolute h-[1px] ph:mx-7 dt:ml-0 ${
               isFirstRow
-                ? 'dt:left-[135px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
+                ? 'dt:left-[135px] min-[441px]:left-[67px] max-[441px]:left-[calc(69px+_((100vw-376px)_*_0.5))] ph:max-w-[252px] dt:max-w-[1108px]'
                 : isLastRow
-                  ? 'dt:left-[15px] ph:left-0'
-                  : 'ph:left-0 ph:w-[319px]'
+                  ? 'dt:left-[15px] max-[441px]:left-[calc(0px+_((100vw-376px)_*_0.5))]'
+                  : 'max-[441px]:left-[calc(0px+_((100vw-376px)_*_0.5))] ph:w-[319px]'
             }`}
             style={{
               top: `${(screenWidth >= 1220 ? 65 : 26.5) + rowIndex * (screenWidth >= 1220 ? 290 : 112)}px`,
