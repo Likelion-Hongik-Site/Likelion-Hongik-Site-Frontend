@@ -10,8 +10,22 @@ import insta from '@/assets/webps/layout/insta.webp';
 export const Navbar = () => {
   const nav = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
+
+  const handleSidebarOpen = () => {
+    setIsAnimating(true);
+    setIsOpen(true);
+  };
+
+  const handleSidebarClose = () => {
+    setIsAnimating(true);
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300); // sidebar 닫히는 시간
+  };
 
   // 너비 1220px 이상에서 사이드바 닫기
   useEffect(() => {
@@ -34,7 +48,7 @@ export const Navbar = () => {
         headerRef.current &&
         !headerRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false);
+        handleSidebarClose();
       }
     };
 
@@ -97,7 +111,7 @@ export const Navbar = () => {
         <img
           src={hamberger}
           alt="menu"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleSidebarOpen}
           className="w-6 h-6 ml-6 cursor-pointer z-100"
         />
       </nav>
@@ -105,16 +119,16 @@ export const Navbar = () => {
       {/* menu bar */}
       <div
         className={`relative inset-0 transition-opacity duration-300 ${
-          isOpen ? 'opacity-100 visible' : 'opacity-100 invisible'
+          isOpen || isAnimating ? 'opacity-100 visible' : 'opacity-100 invisible'
         }`}
       >
         <div
           ref={sidebarRef}
-          className={`absolute top-0 w-[260px] h-screen bg-black/80 backdrop-blur-[20px] transform
-            transition-transform duration-300 ease-in-out z-100
+          className={`absolute top-0 w-[260px] h-screen bg-black/80 backdrop-blur-[20px] 
+            transform transition-transform duration-300 ease-in-out z-100
             ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
         >
-          <button className="absolute top-6 left-6 cursor-pointer" onClick={() => setIsOpen(false)}>
+          <button className="absolute top-6 left-6 cursor-pointer" onClick={handleSidebarClose}>
             <img src={x} alt="close btn" className="w-6 h-6" />
           </button>
 
@@ -126,7 +140,7 @@ export const Navbar = () => {
               className="w-full flex justify-center cursor-pointer"
               onClick={() => {
                 nav('/');
-                setIsOpen(false);
+                handleSidebarClose();
               }}
             >
               멋쟁이사자처럼 홍익대학교
@@ -135,7 +149,7 @@ export const Navbar = () => {
               className="w-full flex justify-center cursor-pointer"
               onClick={() => {
                 nav('/archive');
-                setIsOpen(false);
+                handleSidebarClose();
               }}
             >
               지난 활동
@@ -144,7 +158,7 @@ export const Navbar = () => {
               className="w-full flex justify-center cursor-pointer"
               onClick={() => {
                 nav('/recruit');
-                setIsOpen(false);
+                handleSidebarClose();
               }}
             >
               지원하기
@@ -153,7 +167,7 @@ export const Navbar = () => {
               className="w-full flex justify-center cursor-pointer"
               onClick={() => {
                 nav('/contact');
-                setIsOpen(false);
+                handleSidebarClose();
               }}
             >
               문의하기
