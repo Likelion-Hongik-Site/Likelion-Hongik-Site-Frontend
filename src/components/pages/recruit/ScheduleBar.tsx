@@ -20,8 +20,10 @@ export const ScheduleBar = () => {
   }, []);
 
   return (
-    <div className="max-w-[1230px] dt:mt-[98px] ph:mt-7 dt:pb-[324px] ph:pb-[87px] flex flex-col ph:mr-7 dt:mr-0 ">
-      <span className="text-gray0 dt:subhead2 ph:subhead3 dt:mb-[62px] ph:mb-2">활동 계획</span>
+    <div className="max-w-[1230px] dt:mt-[98px] ph:mt-7 dt:pb-[324px] ph:pb-[87px] flex flex-col">
+      <span className="text-gray0 dt:subhead2 ph:subhead3 dt:mb-[62px] ph:mb-2 ph:mx-7 dt:mr-0">
+        활동 계획
+      </span>
 
       <ScheduleLines
         totalRows={totalRows}
@@ -29,11 +31,12 @@ export const ScheduleBar = () => {
         gridColumns={gridColumns}
         lastRowLimit={lastRowLimit}
       />
-
-      <div className="grid ph:grid-cols-2 dt:grid-cols-4 dt:gap-x-24 dt:gap-y-18 ph:gap-x-12 ph:gap-y-4 dt:w-full ph:w-[319px] place-items-center items-start">
-        {ScheduleData.map((item, index) => (
-          <ScheduleItem key={index} item={item} index={index} gridColumns={gridColumns} />
-        ))}
+      <div className="flex justify-center items-center w-full max-[441px]:max-w-screen px-7">
+        <div className="grid ph:grid-cols-2 dt:grid-cols-4 dt:gap-x-24 dt:gap-y-18 ph:gap-x-12 ph:gap-y-4 dt:w-full ph:w-[319px] place-items-center items-start">
+          {ScheduleData.map((item, index) => (
+            <ScheduleItem key={index} item={item} index={index} gridColumns={gridColumns} />
+          ))}
+        </div>
       </div>
     </div>
   );

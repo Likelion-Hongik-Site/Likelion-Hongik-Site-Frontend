@@ -11,19 +11,19 @@ export const ScheduleLines = ({
   lastRowLimit,
 }: ScheduleLinesProps) => {
   return (
-    <div className="relative ph:max-w-[319px] dt:max-w-full">
+    <div className="relative ph:w-full ph:min-w-[304px] ph:max-w-[319px] dt:max-w-full">
       {Array.from({ length: totalRows }).map((_, rowIndex) => {
         const isFirstRow = rowIndex === 0;
         const isLastRow = rowIndex === totalRows - 1;
         const phlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 78}%` : '100%';
-        const dtlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 97}%` : '100%';
+        const dtlineWidth = isLastRow ? `${((lastRowLimit + 1) / gridColumns) * 95}%` : '100%';
 
         return (
           <div
             key={`line-${rowIndex}`}
-            className={`absolute h-[1px] ${
+            className={`absolute h-[1px] ph:mx-7 dt:ml-0 ${
               isFirstRow
-                ? 'dt:left-[120px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
+                ? 'dt:left-[135px] ph:left-[65px] ph:max-w-[254px] dt:max-w-[1108px]'
                 : isLastRow
                   ? 'dt:left-[15px] ph:left-0'
                   : 'ph:left-0 ph:w-[319px]'

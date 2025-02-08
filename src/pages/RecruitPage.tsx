@@ -41,7 +41,7 @@ export const RecruitPage = () => {
           </a>
         </div>
 
-        <div className="w-full flex flex-col ph:ml-7 dt:ml-0">
+        <div className="w-full flex flex-col">
           <ScheduleContent />
           <ScheduleBar />
         </div>
