@@ -2,7 +2,7 @@ import { ProfileCardList } from '@/components/pages/contact/ProfileCardList';
 
 export const ContactPage = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="min-h-screen w-full ph:max-w-[440px] flex justify-center">
       <div className="dt:w-[1440px] flex flex-col">
         <h1 className="text-white ph:heading1-eng dt:heading1-eng ph:ml-[26px] dt:ml-[98px] ph:mt-5 dt:mt-[84px]">
           CONTACT
