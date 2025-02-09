@@ -31,7 +31,7 @@ export const ScheduleBar = () => {
         gridColumns={gridColumns}
         lastRowLimit={lastRowLimit}
       />
-      <div className="flex justify-center items-center w-full max-[441px]:max-w-screen px-7">
+      <div className="flex justify-center items-center w-full max-[1219px]:max-w-screen px-7">
         <div className="grid ph:grid-cols-2 dt:grid-cols-4 dt:gap-x-24 dt:gap-y-18 ph:gap-x-12 ph:gap-y-4 dt:w-full ph:w-[319px] place-items-center items-start">
           {ScheduleData.map((item, index) => (
             <ScheduleItem key={index} item={item} index={index} gridColumns={gridColumns} />
