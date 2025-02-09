@@ -12,13 +12,13 @@ export const HomePage = () => {
       </h1>
       <div className="ph:body2 dt:body1 ph:ml-[28px] text-gray7 flex flex-col dt:items-center ph:mt-[3px] dt:mt-[14px]">
         <p className="ph:hidden dt:block">
-          ‘멋쟁이사자처럼’은 국내 최대 규모의 전국 대학 연합 IT 동아리입니다.
+          ‘멋쟁이사자처럼’은 국내 최대 규모의 IT 창업 연합 동아리입니다.
         </p>
         <p className="ph:hidden dt:block">
           처음 시작하더라도 함께 배우며 아이디어를 실현하려는 열정만 있다면 지원 가능합니다.
         </p>
-        <p className="ph:block dt:hidden">‘멋쟁이사자처럼’은 국내 최대 규모의 전국 대학</p>
-        <p className="ph:block dt:hidden">연합 IT 동아리입니다. 처음 시작하더라도 함께 배우며</p>
+        <p className="ph:block dt:hidden">‘멋쟁이사자처럼’은 국내 최대 규모의 IT 창업 연합</p>
+        <p className="ph:block dt:hidden">동아리입니다. 처음 시작하더라도 함께 배우며</p>
         <p className="ph:block dt:hidden">아이디어를 실현하려는 열정만 있다면 지원 가능합니다.</p>
       </div>
       <div className="flex flex-col ph:ml-[28px] ph:gap-[6px] dt:gap-3 ph:subhead3 dt:subhead3 ph:mt-[33px] dt:mt-9">
@@ -28,7 +28,7 @@ export const HomePage = () => {
         </p>
         <p className="flex ph:gap-2 dt:gap-4">
           <span className="text-gray0">모집 대상</span>
-          <span className="text-gray4">홍익대학교 재학생, 휴학생, 졸업유예생</span>
+          <span className="text-gray4">홍익대학교 재학생, 휴학생</span>
         </p>
       </div>
       <div
