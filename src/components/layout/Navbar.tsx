@@ -30,14 +30,15 @@ export const Navbar = () => {
   // 너비 1220px 이상에서 사이드바 닫기
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1220) {
+      if (window.innerWidth >= 1220 && isOpen) {
+        setIsAnimating(false);
         setIsOpen(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isOpen]);
 
   // 사이드바 & 헤더 바깥 클릭 시 사이드바 닫기
   useEffect(() => {
@@ -124,7 +125,7 @@ export const Navbar = () => {
       >
         <div
           ref={sidebarRef}
-          className={`absolute top-0 w-[260px] h-screen bg-black/80 backdrop-blur-[20px] 
+          className={`fixed top-0 w-[260px] h-screen bg-black/80 backdrop-blur-[20px] 
             transform transition-transform duration-300 ease-in-out z-100
             ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
         >

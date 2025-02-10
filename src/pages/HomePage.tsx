@@ -12,13 +12,13 @@ export const HomePage = () => {
       </h1>
       <div className="ph:body2 dt:body1 ph:ml-[28px] text-gray7 flex flex-col dt:items-center ph:mt-[3px] dt:mt-[14px]">
         <p className="ph:hidden dt:block">
-          ‘멋쟁이사자처럼’은 국내 최대 규모의 전국 대학 연합 IT 동아리입니다.
+          ‘멋쟁이사자처럼’은 국내 최대 규모의 IT 창업 연합 동아리입니다.
         </p>
         <p className="ph:hidden dt:block">
           처음 시작하더라도 함께 배우며 아이디어를 실현하려는 열정만 있다면 지원 가능합니다.
         </p>
-        <p className="ph:block dt:hidden">‘멋쟁이사자처럼’은 국내 최대 규모의 전국 대학</p>
-        <p className="ph:block dt:hidden">연합 IT 동아리입니다. 처음 시작하더라도 함께 배우며</p>
+        <p className="ph:block dt:hidden">‘멋쟁이사자처럼’은 국내 최대 규모의 IT 창업 연합</p>
+        <p className="ph:block dt:hidden">동아리입니다. 처음 시작하더라도 함께 배우며</p>
         <p className="ph:block dt:hidden">아이디어를 실현하려는 열정만 있다면 지원 가능합니다.</p>
       </div>
       <div className="flex flex-col ph:ml-[28px] ph:gap-[6px] dt:gap-3 ph:subhead3 dt:subhead3 ph:mt-[33px] dt:mt-9">
@@ -28,13 +28,13 @@ export const HomePage = () => {
         </p>
         <p className="flex ph:gap-2 dt:gap-4">
           <span className="text-gray0">모집 대상</span>
-          <span className="text-gray4">홍익대학교 재학생, 휴학생, 졸업유예생</span>
+          <span className="text-gray4">홍익대학교 재학생, 휴학생</span>
         </p>
       </div>
       <div
         onClick={() => nav('/recruit')}
         className="ph:w-[258px] ph:h-[44px] dt:w-[416px] dt:h-[74px] ph:ml-7 ph:mt-[38px] dt:mt-[66px] flex justify-center items-center rounded-[120px] cursor-pointer mb-[78px]
-      bg-linear-[92deg,#5FACFF_12%,#5F9AFF_30%,#5F74FF_102%]"
+      bg-linear-[92deg,#3E85FF_10%,#5F72FF_55%,#7A5FFF_102%]"
       >
         <span className="ph:subhead1 dt:subhead1 text-gray9 ph:mr-[9px] dt:mr-[22px]">
           홍익대학교 멋사 13기 지원하기
