@@ -30,14 +30,15 @@ export const Navbar = () => {
   // 너비 1220px 이상에서 사이드바 닫기
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1220) {
+      if (window.innerWidth >= 1220 && isOpen) {
+        setIsAnimating(false);
         setIsOpen(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isOpen]);
 
   // 사이드바 & 헤더 바깥 클릭 시 사이드바 닫기
   useEffect(() => {
