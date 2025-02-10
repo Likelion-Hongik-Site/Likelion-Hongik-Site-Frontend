@@ -58,17 +58,18 @@ export const Project = () => {
     };
 
     return (
-      <div className="w-full max-w-[1614px] h-[397px] mx-auto flex justify-center dt:mb-[144px] overflow-hidden relative">
+      <div className="w-full max-w-[1614px] h-[397px] mx-auto flex justify-center dt:mb-[144px] overflow-hidden">
         <div className="w-[1440px] flex justify-center items-center mx-auto relative">
           <button
             className="absolute left-0 z-10 w-[300px] h-[511px]"
             onClick={() => setCurrentIndex(getIndex(-1))}
             style={{
-              background: 'linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%);'
+              background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%)'
             }}
           >
             <img className="w-[60px]" src={leftArrow} alt="left" />
           </button>
+          
           <div className="flex justify-center items-center">
             {[0, 1, 2].map((offset, index, array) => (
               <div
@@ -91,13 +92,13 @@ export const Project = () => {
             ))}
           </div>
           <button
-            className="absolute right-0 z-10 w-[300px] h-[511px]"
+            className="absolute right-0 z-10 w-[300px] h-[511px] flex items-center"
             onClick={() => setCurrentIndex(getIndex(1))}
             style={{
-              background: 'linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%);'
+              background: 'linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%)'
             }}
           >
-            <img className="w-[60px]" src={rightArrow} alt="right" />
+            <img className="w-[60px] ml-auto" src={rightArrow} alt="right" />
           </button>
         </div>
       </div>
