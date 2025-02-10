@@ -3,8 +3,6 @@ import rv2 from '@/assets/webps/review/2.webp';
 import rv3 from '@/assets/webps/review/3.webp';
 import rv4 from '@/assets/webps/review/4.webp';
 import rv5 from '@/assets/webps/review/5.webp';
-import rv6 from '@/assets/webps/review/6.webp';
-import rv7 from '@/assets/webps/review/7.webp';
 import rv8 from '@/assets/webps/review/8.webp';
 import rv9 from '@/assets/webps/review/9.webp';
 import rv10 from '@/assets/webps/review/10.webp';
@@ -66,13 +64,7 @@ export const Review = () => {
             </div>
       </div>
       <div className="flex-none">
-        <img src={rv6} alt="review-6" className="h-[288px] object-cover ml-[500px] mr-[16px] rounded-[20px]" />
-      </div>
-      <div className="flex-none">
-        <img src={rv7} alt="review-7" className="h-[288px] object-cover mr-[16px] rounded-[20px]" />
-      </div>
-      <div className="flex-none">
-        <img src={rv8} alt="review-8" className="h-[288px] object-cover mr-[16px] rounded-[20px]" />
+        <img src={rv8} alt="review-8" className="h-[288px] object-cover ml-[500px] mr-[16px] rounded-[20px]" />
       </div>
       <div className="flex-none">
         <img src={rv9} alt="review-9" className="h-[288px] object-cover mr-[16px] rounded-[20px]" />

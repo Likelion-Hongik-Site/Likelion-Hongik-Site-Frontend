@@ -17,10 +17,10 @@ import id5 from '@/assets/webps/project/id_5.webp';
 import ht1 from '@/assets/webps/project/ht_1.webp';
 import ht2 from '@/assets/webps/project/ht_2.webp';
 import ht3 from '@/assets/webps/project/ht_3.webp';
+import ht4 from '@/assets/webps/project/ht_4.webp';
 
 import fest1 from '@/assets/webps/project/fest_1.webp';
 import fest2 from '@/assets/webps/project/fest_2.webp';
-import fest3 from '@/assets/webps/project/fest_3.webp';
 
 const demoday = [
   { image: dm1, name: "아이스브레이킹 서비스" },
@@ -38,12 +38,12 @@ const ideathon = [
 const hackathon = [
   { image: ht1, name: "약 관리 서비스" },
   { image: ht2, name: "직장인 다이어리 서비스" },
-  { image: ht3, name: "야작 플랫폼" }
+  { image: ht3, name: "건강한 야작 플랫폼" },
+  { image: ht4, name: "반려동물 펫로스 케어 서비스" }
 ];
 const festival = [
   { image: fest1, name: "대동제 프로젝트" },
   { image: fest2, name: "대동제 프로젝트" },
-  { image: fest3, name: "대동제 프로젝트" }
 ];
 
 export const Project = () => {
@@ -75,10 +75,10 @@ export const Project = () => {
               <div
                 key={offset}
                 className={`${
-                  offset === 1 ? 'w-[540px] h-[397px]' : 'w-[486px] h-[357px]'
-                } bg-gray9 ${index !== array.length - 1 ? 'mr-[51px]' : ''} rounded-[50px]`}
+                  offset === 1 ? 'w-[540px] h-[369px]' : 'w-[486px] h-[332px]'
+                } bg-gray9 ${index !== array.length - 1 ? 'mr-[51px]' : ''} rounded-[50px] px-[23px] py-[24px]`}
               >
-                <div className="w-auto text-white dt:body1 ph:subhead4 dt:mt-[39px] dt:ml-[23px] dt:mb-[19px]"> 
+                <div className="w-auto text-white dt:body4 ml-[27px] mb-[16px]"> 
                   {images[getIndex(offset)].name}
                 </div>
                 <img
@@ -86,7 +86,7 @@ export const Project = () => {
                   alt={`project-${getIndex(offset)}`}
                   className={`${
                     offset === 1 ? 'w-[494px] h-[274px]' : 'w-[444.6px] h-[246.6px]'
-                  } object-cover mx-auto mt-[20px] rounded-[50px]`}
+                  } object-cover rounded-[30px]`}
                 />
               </div>
             ))}
@@ -109,7 +109,7 @@ export const Project = () => {
     return activeTab === tab ? 'text-black bg-blue2' : 'text-blue2 bg-black border-blue2 ring-1 hover:bg-blue2 hover:text-black transition';
   };
 
-  const baseButtonClass = "flex items-center justify-center dt:subhead2 px-7 py-4 rounded-[100px] text-center cursor-pointer";
+  const baseButtonClass = "flex items-center justify-center dt:subhead2 dt:px-7 dt:py-4 dt:rounded-[100px] text-center cursor-pointer transition duration-200 ease-in-out";
 
   return (
     <div>
@@ -139,3 +139,73 @@ export const Project = () => {
 };
 
 
+
+
+
+
+// swiper 버전
+
+// export const Project = () => {
+//   const [activeTab, setActiveTab] = useState('ideathon');
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const renderImages = (images: { image: string, name: string }[]) => {
+//     const [activeIndex, setActiveIndex] = useState(0);
+
+//     return (
+//       <div className="w-full max-w-[1665px] h-[397px] mx-auto flex justify-center dt:mb-[144px] overflow-hidden relative">
+//         <div className="absolute left-1/2 transform -translate-x-1/2">
+//           <Swiper
+//             slidesPerView={3}
+//             spaceBetween={51}
+//             centeredSlides={true}
+//             loop={true}
+//             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+//             navigation={{
+//               nextEl: '.swiper-button-next',
+//               prevEl: '.swiper-button-prev',
+//             }}
+//             modules={[Navigation]}
+//             className="w-[1665px] flex justify-center items-center"
+//           >
+//             {images.map((item, index) => (
+//               <SwiperSlide key={index} className="flex justify-center items-center">
+//                 <div
+//                   className={`${
+//                     activeIndex === index ? 'w-[540px] h-[369px]' : 'w-[486px] h-[332px]'
+//                   } bg-gray9 rounded-[50px] px-[23px] py-[24px]`}
+//                 >
+//                   <div className="w-auto text-white dt:body4 ml-[27px] mb-[16px]">
+//                     {item.name}
+//                   </div>
+//                   <img
+//                     src={item.image}
+//                     alt={`project-${index}`}
+//                     className={`${
+//                       activeIndex === index ? 'w-[494px] h-[274px]' : 'w-[444.6px] h-[246.6px]'
+//                     } object-cover rounded-[30px]`}
+//                   />
+//                 </div>
+//               </SwiperSlide>
+//             ))}
+//           </Swiper>
+//         </div>
+//         <button
+//           className="swiper-button-prev absolute left-0 z-10 w-[300px] h-[511px]"
+//           style={{
+//             background: 'linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%)'
+//           }}
+//         >
+//           <img className="w-[60px]" src={leftArrow} alt="left" />
+//         </button>
+//         <button
+//           className="swiper-button-next absolute right-0 z-10 w-[300px] h-[511px] flex items-center"
+//           style={{
+//             background: 'linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.73) 47%, rgba(0, 0, 0, 0.44) 78%, rgba(0, 0, 0, 0.00) 100%)'
+//           }}
+//         >
+//           <img className="w-[60px] ml-auto" src={rightArrow} alt="right" />
+//         </button>
+//       </div>
+//     );
+//   };
