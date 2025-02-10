@@ -5,10 +5,10 @@ import { GradientCursor } from '@/components/ui/gradientCursor';
 export const Layout = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-black overflow-hidden">
-      <div className="dt:min-w-screen ph:min-w-[375px] ph:w-full ph:max-w-[440px] flex flex-col dt:items-center ph:items-start bg-black">
-        <GradientCursor />
+      <GradientCursor />
+      <div className="relative ph:[clip-path:inset(0_0_0_0)] dt:min-w-screen ph:min-w-[375px] ph:w-full ph:max-w-[440px] overflow-hidden flex flex-col dt:items-center ph:items-start bg-black">
         <Navbar />
-        <main className="ph:mt-[72px] dt:mt-[88px]">
+        <main className="ph:min-h-[calc(100vh-72px)] ph:mt-[72px] dt:min-h-[calc(100vh-88px)] dt:mt-[88px]">
           <Outlet />
         </main>
       </div>
