@@ -7,8 +7,8 @@ export const RecruitPage = () => {
   const applicationFormURL = 'https://naver.com';
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center dt:mt-[84px] ph:mt-5 dt:ml-0">
-      <div className="dt:w-[1230px] relative">
+    <div className=" dt:w-[1230px] max-[376px]:w-full min-[439px]:w-[440px] flex flex-col dt:items-center justify-center dt:mt-[84px] ph:mt-5 dt:ml-0">
+      <div className="relative">
         <div className="flex flex-col items-start text-left relative">
           <span className="text-white dt:heading1-eng ph:heading1-eng ph:ml-6 dt:ml-0">
             RECRUITING
