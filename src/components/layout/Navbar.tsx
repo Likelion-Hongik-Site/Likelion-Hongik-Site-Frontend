@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/Button';
 import logo from '@/assets/webps/layout/logo.webp';
-import likelion from '@/assets/webps/layout/likelion.webp';
 import hamberger from '@/assets/webps/layout/hamberger.webp';
 import x from '@/assets/webps/layout/x.webp';
 import insta from '@/assets/webps/layout/insta.webp';
@@ -79,12 +78,11 @@ export const Navbar = () => {
     <>
       {/* dt */}
       <nav className="ph:hidden dt:flex w-full bg-black h-[88px] fixed items-center justify-between z-999">
-        <div className="ml-11 flex items-center">
-          <div className="flex items-center mr-4 cursor-pointer" onClick={() => nav('/')}>
-            <img src={logo} alt="logo" className="w-[25px] h-[25px] mr-[10px]" />
-            <img src={likelion} alt="likelion logo" className="w-[120px] h-[19px]" />
-          </div>
+        <div className="ml-10 flex items-center">
           <div className="flex gap-[14px]">
+            <Button href="/" onClick={() => nav('/')}>
+              LIKELION HONGIK
+            </Button>
             <Button href="https://www.instagram.com/likelion_hongik/">Instagram</Button>
             <Button href="/contact" onClick={() => nav('/contact')}>
               Contact
