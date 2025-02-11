@@ -4,17 +4,19 @@ interface ProfileCardData {
   profile: {
     part: string;
     name: string;
+    image: string;
     department: string;
     phoneNumber: string;
   };
 }
 
 export const ProfileCard = ({ profile }: ProfileCardData) => {
-  const { part, name, department, phoneNumber } = profile;
+  const { part, name, image, department, phoneNumber } = profile;
 
   return (
     <div className="flex flex-col items-center">
       <div className="relative rounded-full ph:w-[72px] ph:h-[72px] dt:w-[96px] dt:h-[96px] bg-gray9">
+        <img src={image} className="rounded-full" />
         <ProfilePart part={part} />
       </div>
       <span className="text-gray0 ph:subhead4 dt:subhead3 ph:mt-[19px] dt:mt-[21px]">{name}</span>

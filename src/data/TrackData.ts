@@ -1,6 +1,6 @@
-import bulbImg from '@/assets/webps/recruit/bulbImg.webp';
-import monitorImg from '@/assets/webps/recruit/monitorImg.webp';
-import devImg from '@/assets/webps/recruit/devImg.webp';
+import bulbImg from '@/assets/webps/pages/recruit/bulbImg.webp';
+import monitorImg from '@/assets/webps/pages/recruit/monitorImg.webp';
+import devImg from '@/assets/webps/pages/recruit/devImg.webp';
 
 export const TrackData = [
   {
