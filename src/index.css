@@ -240,3 +240,25 @@
     }
   }
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 28px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #5d5d5d;
+  border-radius: 20px;
+  height: 7px;
+  margin: 200px;
+  border: 10px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 40px;
+  height: 28px;
+  position: relative;
+  overflow: visible;
+}
