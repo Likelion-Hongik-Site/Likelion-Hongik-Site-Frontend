@@ -14,7 +14,8 @@
   --color-gray8: #303030;
   --color-gray9: #171717;
   --color-black: #000000;
-  --color-blue2: #5f9aff;
+  --color-blue: #6a5fff;
+  --color-blue30: #6a5fff4d;
 
   /* breakpoint */
   --breakpoint-ph: 360px;
