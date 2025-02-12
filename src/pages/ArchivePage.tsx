@@ -1,7 +1,7 @@
-import { Project } from "@/components/Archive/Project";
-import { Review } from "@/components/Archive/Review";
-import { Projectph } from "@/components/Archive/Projectph";
-import { Reviewph } from "@/components/Archive/Reviewph";
+import { Project } from '@/components/pages/archive/Project';
+import { Review } from '@/components/pages/archive/Review';
+import { Projectph } from '@/components/pages/archive/Projectph';
+import { Reviewph } from '@/components/pages/archive/Reviewph';
 
 export const ArchivePage = () => {
   return (
@@ -15,7 +15,7 @@ export const ArchivePage = () => {
         </p>
         <div className="ph:hidden dt:block">
           <Project/>
-
+          <div className= "text-white dt:subhead1 ml-[28px] mb-[40px]">활동사진</div>
           <div className="flex justify-center mb-[142px]">
             <Review />
           </div>

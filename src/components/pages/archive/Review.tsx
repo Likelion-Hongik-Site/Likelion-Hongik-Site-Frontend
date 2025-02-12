@@ -1,46 +1,47 @@
-import rv1 from '@/assets/webps/review/1.webp';
-import rv2 from '@/assets/webps/review/2.webp';
-import rv3 from '@/assets/webps/review/3.webp';
-import rv4 from '@/assets/webps/review/4.webp';
-import rv5 from '@/assets/webps/review/5.webp';
-import rv8 from '@/assets/webps/review/8.webp';
-import rv9 from '@/assets/webps/review/9.webp';
-import rv10 from '@/assets/webps/review/10.webp';
-import rv11 from '@/assets/webps/review/11.webp';
-import rv12 from '@/assets/webps/review/12.webp';
-import rv13 from '@/assets/webps/review/13.webp';
-import rv14 from '@/assets/webps/review/14.webp';
-import rv15 from '@/assets/webps/review/15.webp';
-import rv16 from '@/assets/webps/review/16.webp';
-import rv17 from '@/assets/webps/review/17.webp';
-import rv18 from '@/assets/webps/review/18.webp';
-import rv19 from '@/assets/webps/review/19.webp';
-import rv20 from '@/assets/webps/review/20.webp';
-import rv21 from '@/assets/webps/review/21.webp';
-import rv22 from '@/assets/webps/review/22.webp';
-import rv23 from '@/assets/webps/review/23.webp';
-import rv24 from '@/assets/webps/review/24.webp';
-import rv25 from '@/assets/webps/review/25.webp';
-import rv26 from '@/assets/webps/review/26.webp';
-import rv27 from '@/assets/webps/review/27.webp';
-import rv28 from '@/assets/webps/review/28.webp';
-import rv29 from '@/assets/webps/review/29.webp';
-import rv30 from '@/assets/webps/review/30.webp';
-import rv31 from '@/assets/webps/review/31.webp';
-import rv32 from '@/assets/webps/review/32.webp';
-import rv33 from '@/assets/webps/review/33.webp';
-import rv34 from '@/assets/webps/review/34.webp';
-import rv35 from '@/assets/webps/review/35.webp';
-import rv36 from '@/assets/webps/review/36.webp';
+import rv1 from '@/assets/webps/pages/archive/review/1.webp';
+import rv2 from '@/assets/webps/pages/archive/review/2.webp';
+import rv3 from '@/assets/webps/pages/archive/review/3.webp';
+import rv4 from '@/assets/webps/pages/archive/review/4.webp';
+import rv5 from '@/assets/webps/pages/archive/review/5.webp';
+import rv8 from '@/assets/webps/pages/archive/review/8.webp';
+import rv9 from '@/assets/webps/pages/archive/review/9.webp';
+import rv10 from '@/assets/webps/pages/archive/review/10.webp';
+import rv11 from '@/assets/webps/pages/archive/review/11.webp';
+import rv12 from '@/assets/webps/pages/archive/review/12.webp';
+import rv13 from '@/assets/webps/pages/archive/review/13.webp';
+import rv14 from '@/assets/webps/pages/archive/review/14.webp';
+import rv15 from '@/assets/webps/pages/archive/review/15.webp';
+import rv16 from '@/assets/webps/pages/archive/review/16.webp';
+import rv17 from '@/assets/webps/pages/archive/review/17.webp';
+import rv18 from '@/assets/webps/pages/archive/review/18.webp';
+import rv19 from '@/assets/webps/pages/archive/review/19.webp';
+import rv20 from '@/assets/webps/pages/archive/review/20.webp';
+import rv21 from '@/assets/webps/pages/archive/review/21.webp';
+import rv22 from '@/assets/webps/pages/archive/review/22.webp';
+import rv23 from '@/assets/webps/pages/archive/review/23.webp';
+import rv24 from '@/assets/webps/pages/archive/review/24.webp';
+import rv25 from '@/assets/webps/pages/archive/review/25.webp';
+import rv26 from '@/assets/webps/pages/archive/review/26.webp';
+import rv27 from '@/assets/webps/pages/archive/review/27.webp';
+import rv28 from '@/assets/webps/pages/archive/review/28.webp';
+import rv29 from '@/assets/webps/pages/archive/review/29.webp';
+import rv30 from '@/assets/webps/pages/archive/review/30.webp';
+import rv31 from '@/assets/webps/pages/archive/review/31.webp';
+import rv32 from '@/assets/webps/pages/archive/review/32.webp';
+import rv33 from '@/assets/webps/pages/archive/review/33.webp';
+import rv34 from '@/assets/webps/pages/archive/review/34.webp';
+import rv35 from '@/assets/webps/pages/archive/review/35.webp';
+import rv36 from '@/assets/webps/pages/archive/review/36.webp';
 
 export const Review = () => {
   return (
-    <div className="w-[2160px] h-[575px] overflow-x-scroll custom-scrollbar flex relative items-center">
-      <div className="flex-none">
+      <div className="w-[2160px] h-[575px] overflow-x-scroll custom-scrollbar flex relative items-center">
+      {/* <div className="absolute top-0 left-0 text-white dt:subhead1 ml-[28px] mb-[40px]">활동사진</div> */}
+        <div className="flex-none">
         <img
           src={rv1}
           alt="review-1"
-          className="h-[288px] object-cover ml-[20px] mr-[16px] rounded-[20px]"
+          className="h-[288px] object-cover ml-[20px] mr-[16px] rounded-[40px]"
         />
       </div>
       <div className="flex-none">
