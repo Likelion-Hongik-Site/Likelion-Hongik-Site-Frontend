@@ -21,7 +21,8 @@ export const GradientCursor = () => {
         className="fixed top-0 left-0 w-[120px] h-[120px] pointer-events-none"
         style={{
           transform: `translate(${position.x - 60}px, ${position.y - 60}px)`,
-          background: 'radial-gradient(circle, rgba(95,154,255,1) 0%, rgba(95,154,255,0) 80%)',
+          background:
+            'radial-gradient(circle, rgba(106, 95, 255, 1) 0%, rgba(106, 95, 255, 0) 80%)',
           filter: 'blur(12px)',
           borderRadius: '50%',
           zIndex: 9999,

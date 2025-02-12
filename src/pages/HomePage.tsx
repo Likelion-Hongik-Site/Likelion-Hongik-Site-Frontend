@@ -34,7 +34,7 @@ export const HomePage = () => {
       <div
         onClick={() => nav('/recruit')}
         className="ph:w-[258px] ph:h-[44px] dt:w-[416px] dt:h-[74px] ph:ml-7 ph:mt-[38px] dt:mt-[66px] flex justify-center items-center rounded-[120px] cursor-pointer mb-[78px]
-      bg-linear-[92deg,#3356EE_10%,#564AFF_48%,#714AFF_95%]"
+      bg-linear-[92deg,#564AFF_0%,#7653F6_100%]"
       >
         <span className="ph:subhead1 dt:subhead1 text-gray9 ph:mr-[9px] dt:mr-[22px]">
           홍익대학교 멋사 13기 지원하기
