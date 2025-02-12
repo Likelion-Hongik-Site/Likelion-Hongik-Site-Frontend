@@ -40,7 +40,7 @@ export const ProfileData = [
     part: '프론트엔드',
     name: '원채영',
     image: profile5,
-    department: '캠퍼스자율전공 22',
+    department: '컴퓨터공학과 22',
     phoneNumber: '010-4085-3878',
   },
   {

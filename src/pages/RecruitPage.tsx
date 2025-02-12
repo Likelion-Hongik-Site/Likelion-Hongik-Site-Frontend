@@ -4,7 +4,7 @@ import { ScheduleContent } from '@/components/pages/recruit/ScheduleContent';
 
 export const RecruitPage = () => {
   const [selected, setSelected] = useState('schedule');
-  const applicationFormURL = 'https://naver.com';
+  const applicationFormURL = 'https://forms.gle/9MrR7X9Zowg59t1s9';
 
   return (
     <div className=" dt:w-[1230px] max-[376px]:w-full min-[439px]:w-[440px] flex flex-col dt:items-center justify-center dt:mt-[84px] ph:mt-5 dt:ml-0">
@@ -25,7 +25,7 @@ export const RecruitPage = () => {
         <div className="flex gap-[18px] mt-10 ph:gap-3 ph:mt-[57px] ph:ml-7 dt:ml-0">
           <button
             className={`flex items-center justify-center dt:subhead2 ph:subhead2 dt:px-7 dt:py-4 ph:px-[18px] ph:py-[10px] dt:rounded-[100px] ph:rounded-[66.667px] text-center cursor-pointer transition duration-200 ease-in-out
-            ${selected === 'schedule' ? 'text-black bg-blue2' : 'text-blue2 bg-black'}`}
+            ${selected === 'schedule' ? 'text-black bg-blue' : 'text-blue bg-black'}`}
             onClick={() => setSelected('schedule')}
           >
             일정 및 소개
@@ -35,7 +35,7 @@ export const RecruitPage = () => {
             href={applicationFormURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center dt:subhead2 ph:subhead2 dt:px-7 dt:py-4 ph:px-[18px] ph:py-[10px] dt:rounded-[100px] ph:rounded-[66.667px] bg-black text-blue2 text-center cursor-pointer border-blue2 ring-1 hover:bg-blue2 hover:text-black transition duration-200 ease-in-out"
+            className="flex items-center justify-center dt:subhead2 ph:subhead2 dt:px-7 dt:py-4 ph:px-[18px] ph:py-[10px] dt:rounded-[100px] ph:rounded-[66.667px] bg-black text-blue text-center cursor-pointer border-blue ring-1 hover:bg-blue30 hover:text-blue transition duration-200 ease-in-out"
           >
             지원 폼 작성하기
           </a>
