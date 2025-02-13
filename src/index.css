@@ -193,6 +193,15 @@
       letter-spacing: -0.8%;
       font-family: 'Pretendard', sans-serif;
     }
+
+    .dt\:body4 {
+      font-size: 16px !important;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: -0.8%;
+      font-family: 'Pretendard', sans-serif;
+    }
+
     .dt\:caption1 {
       font-size: 14px !important;
       font-weight: 500;
@@ -231,4 +240,66 @@
       font-family: 'Gmarket Sans', sans-serif;
     }
   }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 28px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #5d5d5d;
+  border-radius: 20px;
+  height: 7px;
+  margin: 200px;
+  border: 10px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 40px;
+  height: 28px;
+  position: relative;
+  overflow: visible;
+}
+
+
+.projectSwiper .swiper-slide {
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+
+.projectSwiper .swiper-slide-active {
+  transform: scale(1);
+}
+
+.projectSwiper .swiper-slide-next,
+.projectSwiper .swiper-slide-prev {
+  transform: scale(0.9);
+}
+
+.projectSwiper .swiper-slide img {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.projectSwiper .swiper-slide-active img {
+  width: 494px;
+  height: 274px;
+}
+
+.projectSwiper .swiper-slide-next img,
+.projectSwiper .swiper-slide-prev img {
+  width: 444.6px; 
+  height: 246.6px;  
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -13,7 +13,7 @@ export const RecruitPage = () => {
           <span className="text-white dt:heading1-eng ph:heading1-eng ph:ml-6 dt:ml-0">
             RECRUITING
           </span>
-          <span className="text-gray4 absolute left-0 dt:top-[215px] ph:top-[67px] opacity-50 dt:body1 ph:body2 ph:ml-7 dt:ml-[13px]">
+          <span className="dt:text-gray4 absolute left-0 dt:top-[215px] ph:top-[67px] ph:text-gray6 dt:body1 ph:body2 ph:ml-7 dt:ml-[13px]">
             <span className="dt:inline ph:hidden">2025년</span> 멋쟁이사자처럼을 함께할 13기 멤버를
             모집합니다.&nbsp;
             <span className="ph:block dt:inline">
