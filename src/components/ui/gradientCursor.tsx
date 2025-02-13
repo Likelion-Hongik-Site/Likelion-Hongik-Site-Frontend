@@ -2,15 +2,29 @@ import { useState, useEffect } from 'react';
 
 export const GradientCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [isVisible, setIsVisible] = useState(window.innerWidth > 440); // 440px 초과 시 true
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      if (isVisible) {
+        setPosition({ x: e.clientX, y: e.clientY });
+      }
+    };
+
+    const handleResize = () => {
+      setIsVisible(window.innerWidth > 440);
     };
 
     window.addEventListener('mousemove', moveCursor);
-    return () => window.removeEventListener('mousemove', moveCursor);
-  }, []);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isVisible]);
+
+  if (!isVisible) return null; // 440px 이하에서는 커서를 렌더링하지 않음
 
   return (
     <>

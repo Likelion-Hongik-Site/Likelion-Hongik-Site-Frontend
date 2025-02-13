@@ -264,7 +264,6 @@
   overflow: visible;
 }
 
-
 .projectSwiper .swiper-slide {
   transition: all 0.3s ease;
   transform: scale(0.9);
@@ -291,8 +290,8 @@
 
 .projectSwiper .swiper-slide-next img,
 .projectSwiper .swiper-slide-prev img {
-  width: 444.6px; 
-  height: 246.6px;  
+  width: 494px;
+  height: 274px;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
