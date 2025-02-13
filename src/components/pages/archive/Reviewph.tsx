@@ -90,7 +90,7 @@ export const Reviewph = () => {
             src={rv5}
             alt="review-5"
             className="h-[214px] w-[170px] transform rotate-[5deg] relative z-10 rounded-[16px]"
-            style={{ marginLeft: '-28px', marginRight: '10px', boxShadow: '0px 0px 12px 2px #000' }}
+            style={{ marginLeft: '-24px', marginRight: '10px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv8, 135)}>
