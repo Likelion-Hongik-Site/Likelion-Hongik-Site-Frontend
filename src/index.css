@@ -278,3 +278,28 @@
 .projectSwiper .swiper-slide-prev {
   transform: scale(0.9);
 }
+
+.projectSwiper .swiper-slide img {
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.projectSwiper .swiper-slide-active img {
+  width: 494px;
+  height: 274px;
+}
+
+.projectSwiper .swiper-slide-next img,
+.projectSwiper .swiper-slide-prev img {
+  width: 444.6px; 
+  height: 246.6px;  
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

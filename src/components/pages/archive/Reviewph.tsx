@@ -85,33 +85,36 @@ export const Reviewph = () => {
             style={{ boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
-        <div className="flex-none" onClick={() => openModal(rv5, 202)}>
+        <div className="flex-none" onClick={() => openModal(rv5, 214)}>
           <img
             src={rv5}
             alt="review-5"
-            className="h-[202px] object-cover transform rotate-[5deg] relative z-10 rounded-[16px]"
-            style={{ marginRight: '10px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[214px] w-[170px] transform rotate-[5deg] relative z-10 rounded-[16px]"
+            style={{ marginLeft: '-28px', marginRight: '10px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv8, 135)}>
           <img
             src={rv8}
             alt="review-8"
-            className="h-[144px] object-cover ml-[-10px] z-0 mr-[8px] rounded-[20px]"
+            className="h-[144px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-28px', marginRight: '28px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv9, 144)}>
           <img
             src={rv9}
             alt="review-9"
-            className="h-[144px] object-cover mr-[8px] rounded-[20px]"
+            className="h-[144px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-20px', marginRight: '20px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv10, 144)}>
           <img
             src={rv10}
             alt="review-10"
-            className="h-[144px] object-cover mr-[8px] rounded-[20px]"
+            className="h-[144px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-12px', marginRight: '12px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv11, 224)}>
@@ -119,50 +122,54 @@ export const Reviewph = () => {
             src={rv11}
             alt="review-11"
             className="h-[234px] transform rotate-[5deg] relative z-0 rounded-[20px]"
-            style={{ marginLeft: '-10px', boxShadow: '0px 0px 12px 2px #000' }}
+            style={{ marginLeft: '-18px', marginRight: '18px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv12, 144)}>
           <img
             src={rv12}
             alt="review-12"
-            className="h-[144px] object-cover ml-[-13px] rounded-[20px]"
+            className="h-[144px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-21px', marginRight: '21px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv13, 144)}>
           <img
             src={rv13}
             alt="review-13"
-            className="h-[144px] object-cover ml-[-8px] rounded-[20px]"
+            className="h-[144px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-13px', marginRight: '13px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv14, 196)}>
           <img
             src={rv14}
             alt="review-14"
-            className="h-[196px] w-[132px] transform rotate-[-4deg] relative z-0 rounded-[20px]"
-            style={{ marginLeft: '-8px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[205px] w-[145px] transform rotate-[-4deg] relative z-0 rounded-[20px]"
+            style={{ marginLeft: '-14px', marginRight: '14px' ,boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv15, 144)}>
           <img
             src={rv15}
             alt="review-15"
-            className="h-[144px] w-[192px] ml-[-16px] rounded-[20px]"
+            className="h-[144px] w-[192px] rounded-[20px]"
+            style={{ marginLeft: '-16px', marginRight: '16px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv16, 144)}>
           <img
             src={rv16}
             alt="review-16"
-            className="h-[144px] w-[192px] ml-[-8px] rounded-[20px]"
+            className="h-[144px] w-[192px] rounded-[20px]"
+            style={{ marginLeft: '-8px', marginRight: '8px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv17, 180)}>
           <img
             src={rv17}
             alt="review-17"
-            className="h-[180px] w-[172px] transform rotate-[5deg] relative z-10 rounded-[20px]"
+            className="h-[184px] object-cover transform rotate-[5deg] relative z-10 rounded-[20px]"
             style={{ marginLeft: '-16px', marginRight: '16px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
@@ -171,7 +178,7 @@ export const Reviewph = () => {
             src={rv18}
             alt="review-18"
             className="h-[144px] w-[192px] rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px' }}
+            style={{ marginLeft: '-32px', marginRight: '32px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv19, 144)}>
@@ -179,23 +186,23 @@ export const Reviewph = () => {
             src={rv19}
             alt="review-19"
             className="h-[144px] object-cover rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px' }}
+            style={{ marginLeft: '-24px', marginRight: '24px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv20, 206)}>
           <img
             src={rv20}
             alt="review-20"
-            className="h-[206px] w-[154px] transform rotate-[-4deg] relative z-0 rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[216px] w-[168px] transform rotate-[-4deg] relative z-0 rounded-[20px]"
+            style={{ marginLeft: '-32px', marginRight: '32px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv21, 144)}>
           <img
             src={rv21}
             alt="review-21"
-            className="h-[144px] w-[192px] object-cover ml-[-16px] rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px' }}
+            className="h-[144px] w-[192px] object-cover rounded-[20px]"
+            style={{ marginLeft: '-40px', marginRight: '40px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv22, 144)}>
@@ -203,23 +210,23 @@ export const Reviewph = () => {
             src={rv22}
             alt="review-22"
             className="h-[144px] w-[192px] rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px' }}
+            style={{ marginLeft: '-32px', marginRight: '32px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv23, 178)}>
           <img
             src={rv23}
             alt="review-23"
-            className="h-[178px] w-[132px] transform rotate-[-5deg] relative z-10 rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[189px] w-[147px] transform rotate-[-5deg] relative z-10 rounded-[20px]"
+            style={{ marginLeft: '-40px', marginRight: '40px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv24, 204)}>
           <img
             src={rv24}
             alt="review-24"
-            className="h-[204px] w-[146px] transform rotate-[5deg] relative z-0 rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[216px] w-[163px] transform rotate-[5deg] relative z-0 rounded-[20px]"
+            style={{ marginLeft: '-40px', marginRight: '40px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv25, 144)}>
@@ -227,7 +234,7 @@ export const Reviewph = () => {
             src={rv25}
             alt="review-25"
             className="h-[144px] w-[206px] rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px' }}
+            style={{ marginLeft: '-44px', marginRight: '44px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv26, 120)}>
@@ -235,15 +242,15 @@ export const Reviewph = () => {
             src={rv26}
             alt="review-26"
             className="h-[144px] w-[304px] rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px' }}
+            style={{ marginLeft: '-36px', marginRight: '36px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv27, 220)}>
           <img
             src={rv27}
             alt="review-27"
-            className="h-[192px] w-[124px] transform rotate-[-4deg] relative z-10 rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px', boxShadow: '0px 0px 12px 2px #000' }}
+            className="h-[200px] w-[137px] transform rotate-[-4deg] relative z-10 rounded-[20px]"
+            style={{ marginLeft: '-40px', marginRight: '40px', boxShadow: '0px 0px 12px 2px #000' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv28, 144)}>
@@ -251,7 +258,7 @@ export const Reviewph = () => {
             src={rv28}
             alt="review-28"
             className="h-[144px] w-[192px] rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px' }}
+            style={{ marginLeft: '-40px', marginRight: '40px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv29, 144)}>
@@ -259,17 +266,17 @@ export const Reviewph = () => {
             src={rv29}
             alt="review-29"
             className="h-[144px] w-[186px] rounded-[20px]"
-            style={{ marginLeft: '-8px', marginRight: '8px' }}
+            style={{ marginLeft: '-32px', marginRight: '32px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv30, 180)}>
           <img
             src={rv30}
             alt="review-30"
-            className="h-[104px] w-[114px] transform rotate-[8.672deg] relative z-10 rounded-[20px]"
+            className="h-[120px] object-cover transform rotate-[8.672deg] relative z-10 rounded-[20px]"
             style={{
-              marginLeft: '-24px',
-              marginRight: '24px',
+              marginLeft: '-40px',
+              marginRight: '40px',
               marginBottom: '100px',
               boxShadow: '0px 0px 12px 2px #000',
             }}
@@ -280,7 +287,7 @@ export const Reviewph = () => {
             src={rv31}
             alt="review-31"
             className="h-[144px] w-[260px] rounded-[20px]"
-            style={{ marginLeft: '-40px', marginRight: '40px' }}
+            style={{ marginLeft: '-56px', marginRight: '56px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv32, 132)}>
@@ -288,7 +295,7 @@ export const Reviewph = () => {
             src={rv32}
             alt="review-32"
             className="h-[144px] w-[284px] rounded-[20px]"
-            style={{ marginLeft: '-32px', marginRight: '32px' }}
+            style={{ marginLeft: '-48px', marginRight: '48px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv33, 132)}>
@@ -296,7 +303,7 @@ export const Reviewph = () => {
             src={rv33}
             alt="review-33"
             className="h-[144px] w-[282px] rounded-[20px]"
-            style={{ marginLeft: '-24px', marginRight: '24px' }}
+            style={{ marginLeft: '-40px', marginRight: '40px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv34, 144)}>
@@ -304,7 +311,7 @@ export const Reviewph = () => {
             src={rv34}
             alt="review-34"
             className="h-[144px] w-[256px] rounded-[20px]"
-            style={{ marginLeft: '-16px', marginRight: '16px' }}
+            style={{ marginLeft: '-32px', marginRight: '32px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv35, 144)}>
@@ -312,7 +319,7 @@ export const Reviewph = () => {
             src={rv35}
             alt="review-35"
             className="h-[144px] w-[142px] rounded-[20px]"
-            style={{ marginLeft: '-8px', marginRight: '8px' }}
+            style={{ marginLeft: '-24px', marginRight: '24px' }}
           />
         </div>
         <div className="flex-none" onClick={() => openModal(rv36, 144)}>
@@ -320,7 +327,7 @@ export const Reviewph = () => {
             src={rv36}
             alt="review-36"
             className="h-[144px] w-[200px] rounded-[20px]"
-            style={{ marginLeft: '', marginRight: '' }}
+            style={{ marginLeft: '-16px', marginRight: '24px' }}
           />
         </div>
       </ScrollContainer>

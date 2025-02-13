@@ -23,7 +23,6 @@ import ht5 from '@/assets/webps/pages/archive/project/ht_5.webp';
 import fest1 from '@/assets/webps/pages/archive/project/fest_1.webp';
 import fest2 from '@/assets/webps/pages/archive/project/fest_2.webp';
 
-import ScrollContainer from 'react-indiana-drag-scroll';
 
 const demoday = [
   { image: dm1, name: '아이스브레이킹 서비스' },
@@ -115,16 +114,17 @@ export const Projectph = () => {
   const getButtonClass = (tab: string) => {
     return activeTab === tab
       ? 'text-black bg-blue'
-      : 'text-blue bg-black border-blue2 ring-1 hover:bg-blue2 hover:text-black transition';
+      : 'text-blue bg-black  hover:bg-blue30 hover:text-blue transition shadow-[inset_0_0_0_1px_#6a5fff]';
   };
 
   const baseButtonClass =
-    'flex items-center w-[105px] h-[44px] justify-center ph:subhead2 ph:px-[18px] ph:py-[10px] ph:rounded-[66.667px] text-center cursor-pointer transition duration-200 ease-in-out hover:bg-blue30 hover:text-blue';
+    'flex items-center h-[44px] justify-center ph:subhead2 ph:px-[18px] ph:py-[10px] ph:rounded-[66.667px] text-center cursor-pointer transition duration-200 ease-in-out';
 
   return (
     <div>
-      <div className="ph:w-[440px] h-[64px] mt-[4px] flex items-center">
-        <ScrollContainer className="flex gap-[12px] ml-[28px] py-[10px] px-[5px] whitespace-nowrap cursor-grab">
+      <div className="ph:max-w-[418px]  mt-[14px] flex items-center overflow-x-auto scrollbar-hide">
+        <div className="w-[360px] ml-[28px]">
+        <div className=" w-[450px] flex gap-[12px] whitespace-nowrap cursor-grab">
           <button
             onClick={() => setActiveTab('ideathon')}
             className={`${baseButtonClass} ${getButtonClass('ideathon')}`}
@@ -148,8 +148,9 @@ export const Projectph = () => {
             className={`${baseButtonClass} ${getButtonClass('demoday')}`}
           >
             데모데이
-          </button>
-        </ScrollContainer>
+          </button> 
+        </div>
+        </div>
       </div>
 
       <div className="mt-[37px] h-[195px] mb-[12px]">
