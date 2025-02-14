@@ -36,12 +36,12 @@ export const ScheduleContent = () => {
           }
         >
           <div
-            className={`w-full max-[441px]:pr-7 max-[375px]:pl-7 flex flex-nowrap dt:gap-5 ph:gap-3 max-[375px]:w-full dt:max-w-[1230px] ph:overflow-x-auto dt:overflow-x-hidden ph:[&::-webkit-scrollbar]:hidden dt:[&::-webkit-scrollbar]:block`}
+            className={`w-full max-dt:pr-7 max-[375px]:pl-7 flex flex-nowrap dt:gap-5 ph:gap-3 max-[375px]:w-full dt:max-w-[1230px] ph:overflow-x-auto dt:overflow-x-hidden ph:[&::-webkit-scrollbar]:hidden dt:[&::-webkit-scrollbar]:block`}
           >
             {TrackData.map((track, index) => (
               <div
                 key={index}
-                className={`flex flex-col justify-end dt:w-[395px] dt:h-[508px] ph:w-[204px] ph:h-[253px] bg-gray9 text-white dt:rounded-[40px] ph:rounded-[25px] dt:pl-[58px] dt:pr-[57px] dt:pb-[58px] ph:px-6 ph:pb-[25px] box-border relative shrink-0 
+                className={`flex flex-col justify-end dt:w-[395px] dt:h-[508px] dt:ml-0 ph:w-[204px] ph:h-[253px] bg-gray9 text-white dt:rounded-[40px] ph:rounded-[25px] dt:pl-[58px] dt:pr-[57px] dt:pb-[58px] ph:px-6 ph:pb-[25px] box-border relative shrink-0 
                   ${index === 0 ? 'min-[375px]:ml-7' : ''}
                 `}
               >
