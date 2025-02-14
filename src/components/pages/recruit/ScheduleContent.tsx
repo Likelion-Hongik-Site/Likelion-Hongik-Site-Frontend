@@ -29,19 +29,21 @@ export const ScheduleContent = () => {
         </div>
         <span className="text-gray0 dt:subhead2 ph:subhead3">트랙 소개</span>
       </div>
-      <div className="flex min-[376px]:pl-7 dt:px-0 box-border justify-end max-[376px]:mx-7 min-[375px]:w-screen min-[441px]:w-full">
+      <div className="flex dt:px-0 box-border justify-end max-[375px]:mx-7 min-[375px]:w-screen min-[441px]:w-full">
         <div
           className={
-            'flex flex-row dt:gap-5 ph:gap-2 dt:mt-[46px] ph:mt-2 dt:w-full max-[376px]:justify-between items-center w-full min-[376px]:w-full ml-auto'
+            'flex flex-row dt:gap-5 ph:gap-2 dt:mt-[46px] ph:mt-2 dt:w-full max-[375px]:justify-between items-center w-full min-[375px]:w-full ml-auto'
           }
         >
           <div
-            className={`w-full max-[441px]:pr-7 flex flex-nowrap dt:gap-5 ph:gap-3 max-[376px]:max-w-[347px] dt:max-w-[1230px] ph:overflow-x-auto dt:overflow-x-hidden ph:[&::-webkit-scrollbar]:hidden dt:[&::-webkit-scrollbar]:block`}
+            className={`w-full max-[441px]:pr-7 flex flex-nowrap dt:gap-5 ph:gap-3 max-[375px]:max-w-[347px] dt:max-w-[1230px] ph:overflow-x-auto dt:overflow-x-hidden ph:[&::-webkit-scrollbar]:hidden dt:[&::-webkit-scrollbar]:block`}
           >
             {TrackData.map((track, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-end dt:w-[395px] dt:h-[508px] ph:w-[204px] ph:h-[253px] bg-gray9 text-white dt:rounded-[40px] ph:rounded-[25px] dt:pl-[58px] dt:pr-[57px] dt:pb-[58px] ph:px-6 ph:pb-[25px] box-border relative shrink-0"
+                className={`flex flex-col justify-end dt:w-[395px] dt:h-[508px] ph:w-[204px] ph:h-[253px] bg-gray9 text-white dt:rounded-[40px] ph:rounded-[25px] dt:pl-[58px] dt:pr-[57px] dt:pb-[58px] ph:px-6 ph:pb-[25px] box-border relative shrink-0 
+                  ${index === 0 ? 'min-[375px]:ml-7' : ''}
+                `}
               >
                 <img
                   src={track.image}
