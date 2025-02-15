@@ -13,7 +13,7 @@ export const ContactPage = () => {
         </p>
         <div className="flex ph:gap-3 dt:gap-7 ph:subhead2-eng dt:body1-eng ph:ml-7 dt:ml-[104px] ph:mt-4 dt:mt-[30px]">
           <span className="text-gray0">Email</span>
-          <span className="text-gray4">hongik.likelion@gmail.com</span>
+          <span className="text-gray4">hongik.likelion&#64;gmail.com</span>
         </div>
         <p className="ph:mt-3 dt:mt-5 text-white ph:subhead3 dt:subhead2 ph:ml-7 dt:ml-[104px]">
           13기 운영진

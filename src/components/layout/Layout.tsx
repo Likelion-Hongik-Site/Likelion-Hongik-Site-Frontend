@@ -1,8 +1,15 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
 import { GradientCursor } from '@/components/ui/gradientCursor';
+import { useEffect } from 'react';
 
 export const Layout = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-black overflow-hidden">
       <GradientCursor />
