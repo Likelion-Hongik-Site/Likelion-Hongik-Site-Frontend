@@ -23,7 +23,7 @@ export const ScheduleContent = () => {
           <div className="flex dt:gap-[21px] ph:flex-col dt:flex-row">
             <span className="text-gray4 dt:body1 ph:subhead3">홍익대학교 재학생, 휴학생</span>
             <span className="text-gray4 dt:body1 ph:subhead3">
-              (단, 반드시 1년간 활동이 가능해야합니다.)
+              (단, 반드시 1년간 활동이 가능해야 합니다.)
             </span>
           </div>
         </div>
