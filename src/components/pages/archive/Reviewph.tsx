@@ -206,7 +206,7 @@ export const Reviewph = () => {
             style={{ marginLeft: '-40px', marginRight: '40px' }}
           />
         </div>
-        <div className="flex-none">
+        <div className="flex-none" onClick={() => openModal(rv37, 144)}>
           <img
             src={rv37}
             alt="review-37"
