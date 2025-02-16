@@ -8,7 +8,7 @@ export const ContactPage = () => {
         <h1 className="text-white ph:heading1-eng dt:heading1-eng ph:ml-[26px] dt:ml-[98px] ph:mt-5 dt:mt-[84px]">
           CONTACT
         </h1>
-        <p className="text-gray4 ph:body2 dt:body1 ph:mt-[1px] dt:mt-[-24px] ph:ml-7 dt:ml-[104px]">
+        <p className="dt:text-gray4 ph:text-gray6 ph:body2 dt:body1 ph:mt-[1px] dt:mt-[-24px] ph:ml-7 dt:ml-[104px]">
           문의사항이 있다면 언제든 연락바랍니다.
         </p>
         <div className="flex ph:gap-3 dt:gap-7 ph:subhead2-eng dt:body1-eng ph:ml-7 dt:ml-[104px] ph:mt-4 dt:mt-[30px]">
